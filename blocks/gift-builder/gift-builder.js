@@ -1,24 +1,33 @@
 import { decorateIcons, createOptimizedPicture } from '../../scripts/aem.js';
 
+function renderIcon(cell) {
+  if (!cell) return '';
+  const picture = cell.querySelector('picture');
+  if (picture) return `<span class="block-icon">${picture.outerHTML}</span>`;
+  const img = cell.querySelector('img');
+  if (img) return `<span class="block-icon"><img src="${img.src}" alt="${img.alt || ''}" loading="lazy"></span>`;
+  const name = cell.textContent?.trim();
+  return name ? `<span class="icon icon-${name}"></span>` : '';
+}
+
 export default function decorate(block) {
-  const rows = [...block.children];
-  const eyebrow = rows[0]?.children[0]?.textContent?.trim();
-  const eyebrowIcon = rows[0]?.children[1]?.textContent?.trim();
-  const heading = rows[1]?.children[0]?.textContent?.trim();
-  const lede = rows[2]?.children[0]?.textContent?.trim();
-  const note = rows[3]?.children[0]?.textContent?.trim();
+  const rows         = [...block.children];
+  const eyebrow      = rows[0]?.children[0]?.textContent?.trim();
+  const eyebrowIconCell = rows[0]?.children[1];
+  const heading      = rows[1]?.children[0]?.textContent?.trim();
+  const lede         = rows[2]?.children[0]?.textContent?.trim();
+  const note         = rows[3]?.children[0]?.textContent?.trim();
 
   const cards = rows.slice(4).map((row) => {
     const cells = [...row.children];
-    const picture = cells[0]?.querySelector('picture');
-    const link = cells[5]?.querySelector('a') || cells[5];
+    const link  = cells[5]?.querySelector('a');
     return {
-      picture,
-      badge: cells[1]?.textContent?.trim(),
-      title: cells[2]?.textContent?.trim(),
-      body: cells[3]?.textContent?.trim(),
-      price: cells[4]?.textContent?.trim(),
-      href: link?.querySelector?.('a')?.href || link?.href || '#',
+      picture: cells[0]?.querySelector('picture'),
+      badge:   cells[1]?.textContent?.trim(),
+      title:   cells[2]?.textContent?.trim(),
+      body:    cells[3]?.textContent?.trim(),
+      price:   cells[4]?.textContent?.trim(),
+      href:    link?.href || '#',
     };
   }).filter((c) => c.title);
 
@@ -26,7 +35,7 @@ export default function decorate(block) {
     <div class="gift-header">
       <div>
         <span class="gift-eyebrow">
-          ${eyebrowIcon ? `<span class="icon icon-${eyebrowIcon}"></span>` : ''}
+          ${renderIcon(eyebrowIconCell)}
           ${eyebrow || ''}
         </span>
         <h2 class="section-title">${heading || ''}</h2>
@@ -49,10 +58,17 @@ export default function decorate(block) {
         </article>`).join('')}
     </div>`;
 
-  block.querySelectorAll('img').forEach((img) => {
+  block.querySelectorAll('.gift-card-media img').forEach((img) => {
     img.closest('picture')?.replaceWith(
       createOptimizedPicture(img.src, img.alt, false, [{ width: '800' }]),
     );
   });
+
+  block.querySelectorAll('.block-icon img').forEach((img) => {
+    img.closest('picture')?.replaceWith(
+      createOptimizedPicture(img.src, img.alt, false, [{ width: '32' }]),
+    );
+  });
+
   decorateIcons(block);
 }

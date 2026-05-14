@@ -238,6 +238,22 @@ html {
   50%       { box-shadow: 0 14px 26px rgba(47, 67, 45, 0.3), 0 0 0 5px rgba(47, 67, 45, 0.18); }
 }
 
+/* ── Usinger image-based icon (.block-icon) ──────────── */
+.block-icon {
+  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.block-icon picture,
+.block-icon img {
+  display: block;
+  height: 1em;
+  object-fit: contain;
+  width: 1em;
+}
+
 /* ── Usinger scroll reveal ───────────────────────────── */
 .usinger-reveal {
   opacity: 0;

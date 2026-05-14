@@ -28,8 +28,16 @@
   text-transform: uppercase;
 }
 
-.announcement-bar .ticker-item .icon {
+.announcement-bar .ticker-item .icon,
+.announcement-bar .ticker-item .block-icon {
   color: var(--usinger-mustard, #e7ba45);
+  display: inline-flex;
   height: 15px;
+  width: 15px;
+}
+
+.announcement-bar .block-icon img {
+  height: 15px;
+  object-fit: contain;
   width: 15px;
 }

@@ -1,21 +1,31 @@
 import { decorateIcons } from '../../scripts/aem.js';
 
+function renderIcon(cell) {
+  if (!cell) return '';
+  const picture = cell.querySelector('picture');
+  if (picture) return `<span class="block-icon">${picture.outerHTML}</span>`;
+  const img = cell.querySelector('img');
+  if (img) return `<span class="block-icon"><img src="${img.src}" alt="${img.alt || ''}" loading="lazy"></span>`;
+  const name = cell.textContent?.trim();
+  return name ? `<span class="icon icon-${name}"></span>` : '';
+}
+
 export default function decorate(block) {
-  const rows = [...block.children];
-  const eyebrow = rows[0]?.children[0]?.textContent?.trim();
-  const eyebrowIcon = rows[0]?.children[1]?.textContent?.trim();
-  const heading = rows[1]?.children[0]?.textContent?.trim();
-  const lede = rows[2]?.children[0]?.textContent?.trim();
-  const steps = rows.slice(3).map((row) => ({
-    num: row.children[0]?.textContent?.trim(),
+  const rows         = [...block.children];
+  const eyebrow      = rows[0]?.children[0]?.textContent?.trim();
+  const eyebrowIconCell = rows[0]?.children[1];
+  const heading      = rows[1]?.children[0]?.textContent?.trim();
+  const lede         = rows[2]?.children[0]?.textContent?.trim();
+  const steps        = rows.slice(3).map((row) => ({
+    num:   row.children[0]?.textContent?.trim(),
     title: row.children[1]?.textContent?.trim(),
-    body: row.children[2]?.textContent?.trim(),
+    body:  row.children[2]?.textContent?.trim(),
   })).filter((s) => s.title);
 
   block.innerHTML = `
     <div class="box-copy">
       <span class="box-eyebrow">
-        ${eyebrowIcon ? `<span class="icon icon-${eyebrowIcon}"></span>` : ''}
+        ${renderIcon(eyebrowIconCell)}
         ${eyebrow || ''}
       </span>
       <h2 class="section-title">${heading || ''}</h2>
@@ -24,10 +34,7 @@ export default function decorate(block) {
         ${steps.map((s) => `
           <article class="box-step">
             <strong aria-hidden="true">${s.num}</strong>
-            <div>
-              <h3>${s.title}</h3>
-              <p>${s.body}</p>
-            </div>
+            <div><h3>${s.title}</h3><p>${s.body}</p></div>
           </article>`).join('')}
       </div>
     </div>
@@ -61,23 +68,20 @@ export default function decorate(block) {
 
   decorateIcons(block);
 
-  // Listen for cart events
   const cartState = new Map();
 
   function updateUI() {
     let weight = 0;
     let subtotal = 0;
-    cartState.forEach(({ weight: w, price, qty }) => {
-      weight += w * qty;
-      subtotal += price * qty;
-    });
+    cartState.forEach(({ weight: w, price, qty }) => { weight += w * qty; subtotal += price * qty; });
     const left = Math.max(0, 6 - weight);
-    const pct = Math.min(100, (weight / 6) * 100);
+    const pct  = Math.min(100, (weight / 6) * 100);
+    const fmt  = (v) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(v);
 
     block.querySelector('.js-weight-total').textContent = weight.toFixed(1);
-    block.querySelector('.js-weight-left').textContent = left.toFixed(1);
-    block.querySelector('.js-cart-weight').textContent = `${weight.toFixed(1)} lb`;
-    block.querySelector('.js-subtotal').textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(subtotal);
+    block.querySelector('.js-weight-left').textContent  = left.toFixed(1);
+    block.querySelector('.js-cart-weight').textContent  = `${weight.toFixed(1)} lb`;
+    block.querySelector('.js-subtotal').textContent     = fmt(subtotal);
     block.querySelector('.js-progress-bar').style.width = `${pct}%`;
     block.querySelector('.js-shipping-note').textContent = left <= 0
       ? 'Deli minimum met. Cold shipment can be scheduled.'
@@ -90,7 +94,7 @@ export default function decorate(block) {
       lines.innerHTML = [...cartState.entries()].map(([name, { weight: w, price, qty }]) => `
         <div class="cart-line">
           <strong>${name}</strong>
-          <strong>${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price * qty)}</strong>
+          <strong>${fmt(price * qty)}</strong>
           <span>${qty} × item</span>
           <span>${(w * qty).toFixed(1)} lb</span>
         </div>`).join('');

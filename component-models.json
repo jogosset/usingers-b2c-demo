@@ -6038,9 +6038,11 @@
     "id": "announcement-bar",
     "fields": [
       {
-        "component": "text",
+        "component": "reference",
         "name": "icon",
-        "label": "Icon name (Lucide)"
+        "label": "Icon image",
+        "multi": false,
+        "valueType": "string"
       },
       {
         "component": "richtext",
@@ -6064,9 +6066,11 @@
         "label": "Eyebrow text"
       },
       {
-        "component": "text",
+        "component": "reference",
         "name": "eyebrow-icon",
-        "label": "Eyebrow icon"
+        "label": "Eyebrow icon",
+        "multi": false,
+        "valueType": "string"
       },
       {
         "component": "text",
@@ -6110,9 +6114,11 @@
         "multi": false
       },
       {
-        "component": "text",
+        "component": "reference",
         "name": "icon",
-        "label": "Icon name (Lucide)"
+        "label": "Icon image",
+        "multi": false,
+        "valueType": "string"
       },
       {
         "component": "text",
@@ -6206,9 +6212,11 @@
         "label": "Eyebrow text"
       },
       {
-        "component": "text",
+        "component": "reference",
         "name": "eyebrow-icon",
-        "label": "Eyebrow icon"
+        "label": "Eyebrow icon",
+        "multi": false,
+        "valueType": "string"
       },
       {
         "component": "text",
@@ -6297,9 +6305,11 @@
         "label": "Eyebrow text"
       },
       {
-        "component": "text",
+        "component": "reference",
         "name": "eyebrow-icon",
-        "label": "Eyebrow icon"
+        "label": "Eyebrow icon",
+        "multi": false,
+        "valueType": "string"
       },
       {
         "component": "text",
@@ -6368,9 +6378,11 @@
         "label": "Section lede"
       },
       {
-        "component": "text",
+        "component": "reference",
         "name": "fact-icon",
-        "label": "Fact icon name"
+        "label": "Fact icon image",
+        "multi": false,
+        "valueType": "string"
       },
       {
         "component": "text",
@@ -6404,9 +6416,11 @@
     "id": "newsletter-footer",
     "fields": [
       {
-        "component": "text",
+        "component": "reference",
         "name": "eyebrow-icon",
-        "label": "Eyebrow icon"
+        "label": "Eyebrow icon",
+        "multi": false,
+        "valueType": "string"
       },
       {
         "component": "text",
