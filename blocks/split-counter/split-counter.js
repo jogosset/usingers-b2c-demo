@@ -13,25 +13,40 @@ function renderIcon(cell) {
 export default function decorate(block) {
   const rows = [...block.children];
 
-  const bgPicture      = rows[0]?.querySelector('picture');
-  const eyebrow        = rows[1]?.children[0]?.textContent?.trim();
+  // ── Left panel ──────────────────────────────────────
+  // Row 0: background image (optional)
+  const bgPicture       = rows[0]?.querySelector('picture');
+  // Row 1: eyebrow text | eyebrow icon
+  const eyebrow         = rows[1]?.children[0]?.textContent?.trim();
   const eyebrowIconCell = rows[1]?.children[1];
-  const heading        = rows[2]?.children[0]?.textContent?.trim();
-  const body           = rows[3]?.children[0]?.textContent?.trim();
-  const primaryLink    = rows[4]?.children[0]?.querySelector('a');
-  const ghostLink      = rows[4]?.children[1]?.querySelector('a');
-  const proofStats     = rows.slice(5, 8).map((row) => ({
+  // Row 2: H1 heading
+  const heading         = rows[2]?.children[0]?.textContent?.trim();
+  // Row 3: body paragraph
+  const body            = rows[3]?.children[0]?.textContent?.trim();
+  // Row 4: primary CTA | ghost CTA
+  const primaryLink     = rows[4]?.children[0]?.querySelector('a');
+  const ghostLink       = rows[4]?.children[1]?.querySelector('a');
+  // Rows 5–7: proof stats (value | label)
+  const proofStats      = rows.slice(5, 8).map((row) => ({
     value: row.children[0]?.textContent?.trim(),
     label: row.children[1]?.textContent?.trim(),
   })).filter((s) => s.value);
-  const products       = rows.slice(8).map((row) => ({
-    picture:  row.children[0]?.querySelector('picture'),
-    name:     row.children[1]?.textContent?.trim(),
-    price:    row.children[2]?.textContent?.trim(),
-    weight:   row.children[3]?.textContent?.trim(),
-    badge:    row.children[4]?.textContent?.trim(),
-    tag:      row.children[5]?.textContent?.trim(),
-  })).filter((p) => p.name);
+
+  // ── Right panel ─────────────────────────────────────
+  // Row 8:  panel background image
+  const panelPicture    = rows[8]?.querySelector('picture');
+  // Row 9:  stamp text (supports line breaks via " / " separator)
+  const stampRaw        = rows[9]?.children[0]?.textContent?.trim() || 'Famous\nSausage';
+  const stampHtml       = stampRaw.replace(/\s*\/\s*/g, '<br>').replace(/\n/g, '<br>');
+  // Row 10: panel kicker
+  const panelKicker     = rows[10]?.children[0]?.textContent?.trim();
+  // Row 11: panel heading
+  const panelHeading    = rows[11]?.children[0]?.textContent?.trim();
+  // Rows 12+: list items (icon cell | text)
+  const listItems       = rows.slice(12).map((row) => ({
+    iconCell: row.children[0],
+    text:     row.children[1]?.textContent?.trim() || row.children[0]?.textContent?.trim(),
+  })).filter((item) => item.text);
 
   block.innerHTML = `
     <div class="counter-left">
@@ -56,50 +71,32 @@ export default function decorate(block) {
           </div>`).join('')}
       </div>
     </div>
+
     <aside class="counter-right">
-      <div class="counter-panel-header">
-        <div class="panel-steam" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div>
-          <h2>Today's counter</h2>
-          <p>Add to your cold box</p>
-        </div>
-        <div class="panel-stamp" aria-hidden="true">Famous<br>Sausage</div>
+      <div class="counter-panel-media">
+        ${panelPicture ? panelPicture.outerHTML : ''}
+        <div class="panel-stamp" aria-hidden="true">${stampHtml}</div>
       </div>
-      <div class="counter-card-stack">
-        ${products.map((p) => `
-          <div class="counter-card" data-weight="${p.weight || 0.75}" data-price="${p.price?.replace(/[^0-9.]/g, '') || 0}">
-            <div class="counter-card-photo">${p.picture ? p.picture.outerHTML : ''}</div>
-            <div class="counter-card-body">
-              <h3>${p.name}</h3>
-              <span class="counter-card-price">${p.price}</span>
-              <span class="counter-card-badge">${p.badge}</span>
-            </div>
-            <div class="counter-card-action">
-              <button class="cc-add-btn" type="button" aria-label="Add ${p.name} to cold box">
-                <span class="icon icon-plus"></span> Add
-              </button>
-            </div>
-          </div>`).join('')}
-      </div>
-      <div class="counter-panel-tally">
-        <div class="tally-row">
-          <span>Cold box weight</span>
-          <strong class="js-tally-weight">0.0 lb</strong>
-        </div>
-        <div class="tally-bar"><div class="tally-bar-fill"></div></div>
-        <div class="tally-row">
-          <span class="js-tally-note">Add 6 lb to unlock cold checkout.</span>
-          <span><strong class="js-tally-left">6.0</strong> lb left</span>
-        </div>
+      <div class="counter-panel-body">
+        ${panelKicker ? `<span class="section-kicker">${panelKicker}</span>` : ''}
+        ${panelHeading ? `<h2>${panelHeading}</h2>` : ''}
+        ${listItems.length ? `
+          <ul class="panel-list">
+            ${listItems.map((item) => `
+              <li>
+                ${renderIcon(item.iconCell)}
+                <span>${item.text}</span>
+              </li>`).join('')}
+          </ul>` : ''}
       </div>
     </aside>`;
 
-  block.querySelectorAll('.counter-bg img, .counter-card-photo img').forEach((img) => {
+  // Optimise images
+  block.querySelectorAll('.counter-bg img, .counter-panel-media img').forEach((img) => {
     img.closest('picture')?.replaceWith(
-      createOptimizedPicture(img.src, img.alt, false, [{ width: '800' }]),
+      createOptimizedPicture(img.src, img.alt, false, [{ width: '900' }]),
     );
   });
-
   block.querySelectorAll('.block-icon img').forEach((img) => {
     img.closest('picture')?.replaceWith(
       createOptimizedPicture(img.src, img.alt, false, [{ width: '32' }]),
@@ -107,31 +104,4 @@ export default function decorate(block) {
   });
 
   decorateIcons(block);
-
-  block.querySelectorAll('.cc-add-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.counter-card');
-      const weight = parseFloat(card.dataset.weight || 0.75);
-      const price  = parseFloat(card.dataset.price  || 0);
-      const name   = card.querySelector('h3')?.textContent;
-      document.dispatchEvent(new CustomEvent('usinger:add-item', { detail: { name, weight, price } }));
-      btn.classList.add('in-cart');
-      btn.innerHTML = '<span class="icon icon-check"></span> Added';
-      decorateIcons(btn);
-    });
-  });
-
-  document.addEventListener('usinger:weight-updated', ({ detail }) => {
-    const { weight, left, pct } = detail;
-    const weightEl = block.querySelector('.js-tally-weight');
-    const leftEl   = block.querySelector('.js-tally-left');
-    const noteEl   = block.querySelector('.js-tally-note');
-    const fill     = block.querySelector('.tally-bar-fill');
-    if (weightEl) weightEl.textContent = `${weight.toFixed(1)} lb`;
-    if (leftEl)   leftEl.textContent   = left.toFixed(1);
-    if (fill)     fill.style.width     = `${pct}%`;
-    if (noteEl)   noteEl.textContent   = left <= 0
-      ? 'Deli minimum met — ready to ship!'
-      : `${left.toFixed(1)} lb left before cold checkout.`;
-  });
 }

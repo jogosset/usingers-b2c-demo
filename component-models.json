@@ -6101,6 +6101,39 @@
         "component": "text",
         "name": "proof-label",
         "label": "Proof stat label"
+      },
+      {
+        "component": "reference",
+        "name": "panel-image",
+        "label": "Right panel background image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "stamp-text",
+        "label": "Animated stamp text (use / for line breaks)"
+      },
+      {
+        "component": "text",
+        "name": "panel-kicker",
+        "label": "Right panel kicker"
+      },
+      {
+        "component": "text",
+        "name": "panel-heading",
+        "label": "Right panel heading"
+      },
+      {
+        "component": "reference",
+        "name": "list-icon",
+        "label": "List item icon",
+        "multi": false,
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "list-text",
+        "label": "List item text"
       }
     ]
   },
