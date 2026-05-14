@@ -1,5 +1,4 @@
-import { decorateIcons, createOptimizedPicture } from '../../scripts/aem.js';
-
+import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   const rows = [...block.children];
@@ -51,11 +50,11 @@ export default function decorate(block) {
         </div>
         <div class="product-actions">
           <button type="button" class="stepper-btn" data-action="decrease" aria-label="Decrease">
-            <span class="icon icon-minus"></span>
+            <img src="/icons/minus.png" alt="" width="20" height="20">
           </button>
           <output>0</output>
           <button type="button" class="stepper-btn" data-action="increase" aria-label="Increase">
-            <span class="icon icon-plus"></span>
+            <img src="/icons/plus.png" alt="" width="20" height="20">
           </button>
         </div>
       </article>`).join('');
@@ -65,7 +64,6 @@ export default function decorate(block) {
         createOptimizedPicture(img.src, img.alt, false, [{ width: '600' }]),
       );
     });
-    decorateIcons(container);
   }
 
   block.innerHTML = `
