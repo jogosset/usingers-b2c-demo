@@ -1,7 +1,9 @@
 .split-counter-wrapper,
 .split-counter-container {
+  margin: 0;
   max-width: unset;
   padding: 0;
+  width: 100%;
 }
 
 .split-counter {
@@ -23,18 +25,26 @@
 }
 
 .split-counter .counter-bg {
-  inset: -4%;
+  inset: 0;
   position: absolute;
   z-index: -1;
 }
 
-.split-counter .counter-bg picture,
+.split-counter .counter-bg picture {
+  display: block;
+  height: 108%;
+  left: -4%;
+  position: absolute;
+  top: -4%;
+  width: 108%;
+}
+
 .split-counter .counter-bg img {
   animation: usinger-hero-drift 20s ease-in-out infinite;
-  height: 108%;
+  height: 100%;
   object-fit: cover;
   opacity: 0.08;
-  width: 108%;
+  width: 100%;
 }
 
 .split-counter .counter-left::after {
