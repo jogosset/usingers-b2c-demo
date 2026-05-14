@@ -1961,7 +1961,7 @@
         "name": "perk-1-icon",
         "label": "Perk 1 Icon",
         "valueType": "string",
-        "value": "★"
+        "value": "\u2605"
       },
       {
         "component": "text",
@@ -1982,7 +1982,7 @@
         "name": "perk-2-icon",
         "label": "Perk 2 Icon",
         "valueType": "string",
-        "value": "♦"
+        "value": "\u2666"
       },
       {
         "component": "text",
@@ -2003,7 +2003,7 @@
         "name": "perk-3-icon",
         "label": "Perk 3 Icon",
         "valueType": "string",
-        "value": "☎"
+        "value": "\u260e"
       },
       {
         "component": "text",
@@ -2253,7 +2253,7 @@
         "name": "dash-line-1-icon",
         "label": "Dash Line 1 Icon",
         "valueType": "string",
-        "value": "📱"
+        "value": "\ud83d\udcf1"
       },
       {
         "component": "text",
@@ -2281,7 +2281,7 @@
         "name": "dash-line-2-icon",
         "label": "Dash Line 2 Icon",
         "valueType": "string",
-        "value": "💻"
+        "value": "\ud83d\udcbb"
       },
       {
         "component": "text",
@@ -2309,7 +2309,7 @@
         "name": "dash-line-3-icon",
         "label": "Dash Line 3 Icon",
         "valueType": "string",
-        "value": "🏢"
+        "value": "\ud83c\udfe2"
       },
       {
         "component": "text",
@@ -2337,7 +2337,7 @@
         "name": "dash-card-cta-label",
         "label": "Dash Card Cta Label",
         "valueType": "string",
-        "value": "View Full Dashboard →"
+        "value": "View Full Dashboard \u2192"
       },
       {
         "component": "text",
@@ -4849,7 +4849,7 @@
         "name": "dash-line-1-icon",
         "label": "Dash Line 1 Icon",
         "valueType": "string",
-        "value": "📱"
+        "value": "\ud83d\udcf1"
       },
       {
         "component": "text",
@@ -4877,7 +4877,7 @@
         "name": "dash-line-2-icon",
         "label": "Dash Line 2 Icon",
         "valueType": "string",
-        "value": "💻"
+        "value": "\ud83d\udcbb"
       },
       {
         "component": "text",
@@ -4905,7 +4905,7 @@
         "name": "dash-line-3-icon",
         "label": "Dash Line 3 Icon",
         "valueType": "string",
-        "value": "🏢"
+        "value": "\ud83c\udfe2"
       },
       {
         "component": "text",
@@ -4933,7 +4933,7 @@
         "name": "dash-card-cta-label",
         "label": "Dash Card CTA Label",
         "valueType": "string",
-        "value": "View Full Dashboard →"
+        "value": "View Full Dashboard \u2192"
       },
       {
         "component": "text",
@@ -4989,114 +4989,114 @@
       {
         "component": "text",
         "name": "stat-1-value",
-        "label": "Stat 1 — Value",
+        "label": "Stat 1 \u2014 Value",
         "valueType": "string",
         "value": "6.1"
       },
       {
         "component": "text",
         "name": "stat-1-unit",
-        "label": "Stat 1 — Unit",
+        "label": "Stat 1 \u2014 Unit",
         "valueType": "string",
         "value": "\""
       },
       {
         "component": "text",
         "name": "stat-1-label",
-        "label": "Stat 1 — Label",
+        "label": "Stat 1 \u2014 Label",
         "valueType": "string",
         "value": "Super Retina XDR OLED display"
       },
       {
         "component": "text",
         "name": "stat-1-sub",
-        "label": "Stat 1 — Sub-label",
+        "label": "Stat 1 \u2014 Sub-label",
         "valueType": "string",
-        "value": "2556 × 1179 px · 460 ppi"
+        "value": "2556 \u00d7 1179 px \u00b7 460 ppi"
       },
       {
         "component": "text",
         "name": "stat-2-value",
-        "label": "Stat 2 — Value",
+        "label": "Stat 2 \u2014 Value",
         "valueType": "string",
         "value": "48"
       },
       {
         "component": "text",
         "name": "stat-2-unit",
-        "label": "Stat 2 — Unit",
+        "label": "Stat 2 \u2014 Unit",
         "valueType": "string",
         "value": "MP"
       },
       {
         "component": "text",
         "name": "stat-2-label",
-        "label": "Stat 2 — Label",
+        "label": "Stat 2 \u2014 Label",
         "valueType": "string",
         "value": "Advanced dual camera with Smart HDR 5"
       },
       {
         "component": "text",
         "name": "stat-2-sub",
-        "label": "Stat 2 — Sub-label",
+        "label": "Stat 2 \u2014 Sub-label",
         "valueType": "string",
-        "value": "ƒ/1.6 aperture · 2x optical zoom"
+        "value": "\u0192/1.6 aperture \u00b7 2x optical zoom"
       },
       {
         "component": "text",
         "name": "stat-3-value",
-        "label": "Stat 3 — Value",
+        "label": "Stat 3 \u2014 Value",
         "valueType": "string",
         "value": "A16"
       },
       {
         "component": "text",
         "name": "stat-3-unit",
-        "label": "Stat 3 — Unit",
+        "label": "Stat 3 \u2014 Unit",
         "valueType": "string",
         "value": " Bionic"
       },
       {
         "component": "text",
         "name": "stat-3-label",
-        "label": "Stat 3 — Label",
+        "label": "Stat 3 \u2014 Label",
         "valueType": "string",
         "value": "6-core CPU, 5-core GPU, 16-core Neural Engine"
       },
       {
         "component": "text",
         "name": "stat-3-sub",
-        "label": "Stat 3 — Sub-label",
+        "label": "Stat 3 \u2014 Sub-label",
         "valueType": "string",
-        "value": "4nm process · 15.8B transistors"
+        "value": "4nm process \u00b7 15.8B transistors"
       },
       {
         "component": "text",
         "name": "stat-4-value",
-        "label": "Stat 4 — Value",
+        "label": "Stat 4 \u2014 Value",
         "valueType": "string",
         "value": "26"
       },
       {
         "component": "text",
         "name": "stat-4-unit",
-        "label": "Stat 4 — Unit",
+        "label": "Stat 4 \u2014 Unit",
         "valueType": "string",
         "value": "hr"
       },
       {
         "component": "text",
         "name": "stat-4-label",
-        "label": "Stat 4 — Label",
+        "label": "Stat 4 \u2014 Label",
         "valueType": "string",
         "value": "Video playback on a single charge"
       },
       {
         "component": "text",
         "name": "stat-4-sub",
-        "label": "Stat 4 — Sub-label",
+        "label": "Stat 4 \u2014 Sub-label",
         "valueType": "string",
-        "value": "USB-C fast charge · MagSafe wireless"
+        "value": "USB-C fast charge \u00b7 MagSafe wireless"
       }
     ]
   },
@@ -5176,149 +5176,149 @@
       {
         "component": "text",
         "name": "review-1-name",
-        "label": "Review 1 — Name",
+        "label": "Review 1 \u2014 Name",
         "valueType": "string",
         "value": "Michael R."
       },
       {
         "component": "text",
         "name": "review-1-date",
-        "label": "Review 1 — Date",
+        "label": "Review 1 \u2014 Date",
         "valueType": "string",
         "value": "March 28, 2026"
       },
       {
         "component": "text",
         "name": "review-1-rating",
-        "label": "Review 1 — Rating (1-5)",
+        "label": "Review 1 \u2014 Rating (1-5)",
         "valueType": "string",
         "value": "5"
       },
       {
         "component": "text",
         "name": "review-1-verified",
-        "label": "Review 1 — Verified (true/false)",
+        "label": "Review 1 \u2014 Verified (true/false)",
         "valueType": "string",
         "value": "true"
       },
       {
         "component": "text",
         "name": "review-1-initials",
-        "label": "Review 1 — Initials",
+        "label": "Review 1 \u2014 Initials",
         "valueType": "string",
         "value": "MR"
       },
       {
         "component": "text",
         "name": "review-1-title",
-        "label": "Review 1 — Title",
+        "label": "Review 1 \u2014 Title",
         "valueType": "string",
         "value": "Best phone I've owned in years"
       },
       {
         "component": "text",
         "name": "review-1-text",
-        "label": "Review 1 — Text",
+        "label": "Review 1 \u2014 Text",
         "valueType": "string",
         "value": "Switched from a three-year-old phone and the difference is night and day. Camera is incredible in low light, battery easily lasts a full day, and the screen is stunning."
       },
       {
         "component": "text",
         "name": "review-2-name",
-        "label": "Review 2 — Name",
+        "label": "Review 2 \u2014 Name",
         "valueType": "string",
         "value": "Sarah K."
       },
       {
         "component": "text",
         "name": "review-2-date",
-        "label": "Review 2 — Date",
+        "label": "Review 2 \u2014 Date",
         "valueType": "string",
         "value": "March 15, 2026"
       },
       {
         "component": "text",
         "name": "review-2-rating",
-        "label": "Review 2 — Rating (1-5)",
+        "label": "Review 2 \u2014 Rating (1-5)",
         "valueType": "string",
         "value": "4"
       },
       {
         "component": "text",
         "name": "review-2-verified",
-        "label": "Review 2 — Verified (true/false)",
+        "label": "Review 2 \u2014 Verified (true/false)",
         "valueType": "string",
         "value": "true"
       },
       {
         "component": "text",
         "name": "review-2-initials",
-        "label": "Review 2 — Initials",
+        "label": "Review 2 \u2014 Initials",
         "valueType": "string",
         "value": "SK"
       },
       {
         "component": "text",
         "name": "review-2-title",
-        "label": "Review 2 — Title",
+        "label": "Review 2 \u2014 Title",
         "valueType": "string",
         "value": "Great camera, solid daily driver"
       },
       {
         "component": "text",
         "name": "review-2-text",
-        "label": "Review 2 — Text",
+        "label": "Review 2 \u2014 Text",
         "valueType": "string",
-        "value": "The camera is the standout feature for me — photos look professional without any editing. Battery gets me through a full work day with about 30% left."
+        "value": "The camera is the standout feature for me \u2014 photos look professional without any editing. Battery gets me through a full work day with about 30% left."
       },
       {
         "component": "text",
         "name": "review-3-name",
-        "label": "Review 3 — Name",
+        "label": "Review 3 \u2014 Name",
         "valueType": "string",
         "value": "James T."
       },
       {
         "component": "text",
         "name": "review-3-date",
-        "label": "Review 3 — Date",
+        "label": "Review 3 \u2014 Date",
         "valueType": "string",
         "value": "February 22, 2026"
       },
       {
         "component": "text",
         "name": "review-3-rating",
-        "label": "Review 3 — Rating (1-5)",
+        "label": "Review 3 \u2014 Rating (1-5)",
         "valueType": "string",
         "value": "5"
       },
       {
         "component": "text",
         "name": "review-3-verified",
-        "label": "Review 3 — Verified (true/false)",
+        "label": "Review 3 \u2014 Verified (true/false)",
         "valueType": "string",
         "value": "true"
       },
       {
         "component": "text",
         "name": "review-3-initials",
-        "label": "Review 3 — Initials",
+        "label": "Review 3 \u2014 Initials",
         "valueType": "string",
         "value": "JT"
       },
       {
         "component": "text",
         "name": "review-3-title",
-        "label": "Review 3 — Title",
+        "label": "Review 3 \u2014 Title",
         "valueType": "string",
         "value": "The Sage color is gorgeous"
       },
       {
         "component": "text",
         "name": "review-3-text",
-        "label": "Review 3 — Text",
+        "label": "Review 3 \u2014 Text",
         "valueType": "string",
-        "value": "Went with the Sage colorway and get compliments on it constantly. Performance-wise it handles everything I throw at it — heavy multitasking, gaming, lots of photos."
+        "value": "Went with the Sage colorway and get compliments on it constantly. Performance-wise it handles everything I throw at it \u2014 heavy multitasking, gaming, lots of photos."
       }
     ]
   },
@@ -5602,7 +5602,7 @@
         "valueType": "string",
         "name": "content",
         "label": "Banner Text",
-        "description": "Freeform rich text — supports bold, italic, alignment, headings, and links"
+        "description": "Freeform rich text \u2014 supports bold, italic, alignment, headings, and links"
       }
     ]
   },
@@ -5860,7 +5860,7 @@
         "component": "text",
         "valueType": "string",
         "name": "card-1-value",
-        "label": "Metric Card 1 — Value",
+        "label": "Metric Card 1 \u2014 Value",
         "description": "Value shown in the first frosted-glass metric card (e.g. '862 Days')",
         "value": ""
       },
@@ -5868,7 +5868,7 @@
         "component": "text",
         "valueType": "string",
         "name": "card-1-label",
-        "label": "Metric Card 1 — Label",
+        "label": "Metric Card 1 \u2014 Label",
         "description": "Label shown below the value in card 1 (e.g. 'Average TAT')",
         "value": ""
       },
@@ -5876,28 +5876,28 @@
         "component": "text",
         "valueType": "string",
         "name": "card-2-value",
-        "label": "Metric Card 2 — Value",
+        "label": "Metric Card 2 \u2014 Value",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "card-2-label",
-        "label": "Metric Card 2 — Label",
+        "label": "Metric Card 2 \u2014 Label",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "card-3-value",
-        "label": "Metric Card 3 — Value",
+        "label": "Metric Card 3 \u2014 Value",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "card-3-label",
-        "label": "Metric Card 3 — Label",
+        "label": "Metric Card 3 \u2014 Label",
         "value": ""
       }
     ]
@@ -6031,6 +6031,423 @@
         "name": "subLink6Url",
         "label": "Sub-Link 6 URL",
         "description": "URL path for the sixth sub-navigation link"
+      }
+    ]
+  },
+  {
+    "id": "announcement-bar",
+    "fields": [
+      {
+        "component": "text",
+        "name": "icon",
+        "label": "Icon name (Lucide)"
+      },
+      {
+        "component": "richtext",
+        "name": "message",
+        "label": "Ticker message"
+      }
+    ]
+  },
+  {
+    "id": "split-counter",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "background-image",
+        "label": "Background image (left panel)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "eyebrow",
+        "label": "Eyebrow text"
+      },
+      {
+        "component": "text",
+        "name": "eyebrow-icon",
+        "label": "Eyebrow icon"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading (H1)"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "label": "Body paragraph"
+      },
+      {
+        "component": "aem-content",
+        "name": "primary-cta",
+        "label": "Primary CTA link"
+      },
+      {
+        "component": "aem-content",
+        "name": "ghost-cta",
+        "label": "Ghost CTA link"
+      },
+      {
+        "component": "text",
+        "name": "proof-value",
+        "label": "Proof stat value"
+      },
+      {
+        "component": "text",
+        "name": "proof-label",
+        "label": "Proof stat label"
+      }
+    ]
+  },
+  {
+    "id": "shop-paths",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Card background image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "icon",
+        "label": "Icon name (Lucide)"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Card heading"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "label": "Card description"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Card link"
+      }
+    ]
+  },
+  {
+    "id": "featured-products",
+    "fields": [
+      {
+        "component": "text",
+        "name": "kicker",
+        "label": "Section kicker"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Section heading"
+      },
+      {
+        "component": "richtext",
+        "name": "lede",
+        "label": "Section lede"
+      },
+      {
+        "component": "text",
+        "name": "filters",
+        "label": "Filter config (key:Label, comma-separated)"
+      },
+      {
+        "component": "reference",
+        "name": "product-image",
+        "label": "Product image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "product-name",
+        "label": "Product name"
+      },
+      {
+        "component": "richtext",
+        "name": "product-desc",
+        "label": "Product description"
+      },
+      {
+        "component": "text",
+        "name": "product-price",
+        "label": "Price (e.g. .99)"
+      },
+      {
+        "component": "text",
+        "name": "product-unit",
+        "label": "Unit label"
+      },
+      {
+        "component": "text",
+        "name": "product-weight",
+        "label": "Weight in lbs (e.g. 0.75)"
+      },
+      {
+        "component": "text",
+        "name": "product-badge",
+        "label": "Badge text"
+      },
+      {
+        "component": "text",
+        "name": "product-tags",
+        "label": "Filter tags (comma-separated: quick,lean)"
+      }
+    ]
+  },
+  {
+    "id": "build-a-box",
+    "fields": [
+      {
+        "component": "text",
+        "name": "eyebrow",
+        "label": "Eyebrow text"
+      },
+      {
+        "component": "text",
+        "name": "eyebrow-icon",
+        "label": "Eyebrow icon"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "name": "lede",
+        "label": "Lede paragraph"
+      },
+      {
+        "component": "text",
+        "name": "step-number",
+        "label": "Step number"
+      },
+      {
+        "component": "text",
+        "name": "step-title",
+        "label": "Step title"
+      },
+      {
+        "component": "richtext",
+        "name": "step-body",
+        "label": "Step description"
+      }
+    ]
+  },
+  {
+    "id": "heritage-story",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Media image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "label-year",
+        "label": "Label year/date"
+      },
+      {
+        "component": "text",
+        "name": "label-text",
+        "label": "Label caption"
+      },
+      {
+        "component": "text",
+        "name": "kicker",
+        "label": "Section kicker"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Section heading"
+      },
+      {
+        "component": "richtext",
+        "name": "lede",
+        "label": "Section lede"
+      },
+      {
+        "component": "text",
+        "name": "timeline-year",
+        "label": "Timeline entry year/label"
+      },
+      {
+        "component": "text",
+        "name": "timeline-title",
+        "label": "Timeline entry title"
+      },
+      {
+        "component": "richtext",
+        "name": "timeline-body",
+        "label": "Timeline entry body"
+      }
+    ]
+  },
+  {
+    "id": "gift-builder",
+    "fields": [
+      {
+        "component": "text",
+        "name": "eyebrow",
+        "label": "Eyebrow text"
+      },
+      {
+        "component": "text",
+        "name": "eyebrow-icon",
+        "label": "Eyebrow icon"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Section heading"
+      },
+      {
+        "component": "richtext",
+        "name": "lede",
+        "label": "Section lede"
+      },
+      {
+        "component": "richtext",
+        "name": "note",
+        "label": "Editorial note (right side)"
+      },
+      {
+        "component": "reference",
+        "name": "card-image",
+        "label": "Card image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "card-badge",
+        "label": "Card badge"
+      },
+      {
+        "component": "text",
+        "name": "card-heading",
+        "label": "Card heading"
+      },
+      {
+        "component": "richtext",
+        "name": "card-body",
+        "label": "Card description"
+      },
+      {
+        "component": "text",
+        "name": "card-price",
+        "label": "Card price (e.g. From $42)"
+      },
+      {
+        "component": "aem-content",
+        "name": "card-link",
+        "label": "Card CTA link"
+      }
+    ]
+  },
+  {
+    "id": "store-visit",
+    "fields": [
+      {
+        "component": "text",
+        "name": "kicker",
+        "label": "Section kicker"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Section heading"
+      },
+      {
+        "component": "richtext",
+        "name": "lede",
+        "label": "Section lede"
+      },
+      {
+        "component": "text",
+        "name": "fact-icon",
+        "label": "Fact icon name"
+      },
+      {
+        "component": "text",
+        "name": "fact-title",
+        "label": "Fact title"
+      },
+      {
+        "component": "richtext",
+        "name": "fact-body",
+        "label": "Fact body"
+      },
+      {
+        "component": "aem-content",
+        "name": "primary-cta",
+        "label": "Primary CTA"
+      },
+      {
+        "component": "aem-content",
+        "name": "secondary-cta",
+        "label": "Secondary CTA"
+      },
+      {
+        "component": "reference",
+        "name": "map-image",
+        "label": "Map/location image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "newsletter-footer",
+    "fields": [
+      {
+        "component": "text",
+        "name": "eyebrow-icon",
+        "label": "Eyebrow icon"
+      },
+      {
+        "component": "text",
+        "name": "eyebrow",
+        "label": "Eyebrow text"
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "name": "newsletter-body",
+        "label": "Newsletter description"
+      },
+      {
+        "component": "aem-content",
+        "name": "footer-link",
+        "label": "Footer link"
+      }
+    ]
+  },
+  {
+    "id": "cold-bar",
+    "fields": [
+      {
+        "component": "text",
+        "name": "min-weight",
+        "label": "Minimum weight (lbs)",
+        "description": "Default: 6"
+      },
+      {
+        "component": "text",
+        "name": "cta-text",
+        "label": "CTA button text"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta-link",
+        "label": "CTA destination URL"
       }
     ]
   }

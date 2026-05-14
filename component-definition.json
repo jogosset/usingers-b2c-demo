@@ -1494,6 +1494,132 @@
           }
         }
       ]
+    },
+    {
+      "title": "Usinger's Storefront Blocks",
+      "id": "usinger",
+      "components": [
+        {
+          "title": "Announcement Bar",
+          "id": "announcement-bar",
+          "model": "announcement-bar",
+          "plugins": {
+            "da": {
+              "rows": 4,
+              "columns": 2,
+              "unsafeHTML": "<div class=\"announcement-bar\"><div><div>clock-3</div><div>Retail store open Monday \u2013 Saturday, 9 AM to 4 PM</div></div><div><div>snowflake</div><div>Cold-packed deli orders start at 6 lb</div></div><div><div>map-pin</div><div>Milwaukee sausage makers since 1880</div></div><div><div>gift</div><div>Gift boxes built for holidays, hosts, and tailgates</div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Split Counter",
+          "id": "split-counter",
+          "model": "split-counter",
+          "plugins": {
+            "da": {
+              "rows": 8,
+              "columns": 2,
+              "unsafeHTML": "<div class=\"split-counter\"><div><div></div><div></div></div><div><div>Milwaukee since 1880</div><div>flame</div></div><div><div>The Milwaukee sausage counter, cold-shipped to your door.</div><div></div></div><div><div>Brats, bacon, summer sausage, and smokehouse staples built for the modern cold box.</div><div></div></div><div><div><a href=\"#shop\">Shop the counter</a></div><div><a href=\"#gifts\">Browse gifts</a></div></div><div><div>140+</div><div>Years of Milwaukee craft</div></div><div><div>70+</div><div>Old-world meats and gifts</div></div><div><div>6 lb</div><div>Deli minimum, always visible</div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Shop Paths",
+          "id": "shop-paths",
+          "model": "shop-paths",
+          "plugins": {
+            "da": {
+              "rows": 3,
+              "columns": 5,
+              "unsafeHTML": "<div class=\"shop-paths\"><div><div></div><div>flame</div><div>Grill-ready brats</div><div>Fast paths to cooked bratwurst, smoked sausage, and tailgate staples.</div><div><a href=\"#shop\">Shop the grill</a></div></div><div><div></div><div>snowflake</div><div>Deli cold box</div><div>A guided cart that keeps the 6 lb minimum useful instead of surprising.</div><div><a href=\"#build\">Build the box</a></div></div><div><div></div><div>gift</div><div>Wisconsin gifts</div><div>Cheese, sausage, mustard, and host-ready bundles with a heritage feel.</div><div><a href=\"#gifts\">Send a classic</a></div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Featured Products",
+          "id": "featured-products",
+          "model": "featured-products",
+          "plugins": {
+            "da": {
+              "rows": 7,
+              "columns": 8,
+              "unsafeHTML": "<div class=\"featured-products\"><div><div>Counter favorites</div><div>Every cut, every weight, every smokehouse staple.</div></div><div><div>Add items here \u2014 the cold-box bar tracks your deli weight as you shop.</div><div></div></div><div><div>all:All, quick:Quick Cook, lean:Lean, spicy:Spicy</div><div></div></div><div><div></div><div>Cooked Bratwurst</div><div>Pork and veal bratwurst, fully cooked.</div><div>.99</div><div>per 12 oz.</div><div>0.75</div><div>Old World</div><div>quick</div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Build a Box",
+          "id": "build-a-box",
+          "model": "build-a-box",
+          "plugins": {
+            "da": {
+              "rows": 6,
+              "columns": 3,
+              "unsafeHTML": "<div class=\"build-a-box\"><div><div>Deli checkout, clarified</div><div>package-check</div></div><div><div>The cold box turns a rule into a reason to keep shopping.</div><div></div></div><div><div>Instead of hiding the deli minimum at checkout, this block lets customers track weight, subtotal, and shipment readiness as they browse.</div><div></div></div><div><div>1</div><div>Pick favorites</div><div>Brats, bacon, deli meats, and smokehouse staples all contribute to the same cold shipment.</div></div><div><div>2</div><div>Watch the weight</div><div>The progress meter makes the 6 lb minimum visible while the cart is still easy to adjust.</div></div><div><div>3</div><div>Ship with confidence</div><div>The call to action changes from blocked to ready when the box is full enough.</div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Heritage Story",
+          "id": "heritage-story",
+          "model": "heritage-story",
+          "plugins": {
+            "da": {
+              "rows": 7,
+              "columns": 3,
+              "unsafeHTML": "<div class=\"heritage-story\"><div><div></div><div></div></div><div><div>1880</div><div>A brand story that deserves more than a footer paragraph.</div></div><div><div>Old-world craft</div><div>Make the history feel edible.</div></div><div><div>A homepage can carry the heritage without getting dusty: big type, tactile color, and a rhythm that feels like a deli counter ticket.</div><div></div></div><div><div>1880</div><div>Milwaukee roots</div><div>The brand begins with a riverfront sense of place and a craft tradition shoppers can recognize instantly.</div></div><div><div>Now</div><div>Commerce made practical</div><div>Modern navigation, visible shipping constraints, and guided product paths reduce friction.</div></div><div><div>Next</div><div>Blocks for scale</div><div>Each homepage band is structured as a reusable section that can become a discrete authoring block.</div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Gift Builder",
+          "id": "gift-builder",
+          "model": "gift-builder",
+          "plugins": {
+            "da": {
+              "rows": 7,
+              "columns": 6,
+              "unsafeHTML": "<div class=\"gift-builder\"><div><div>Gifting season, simplified</div><div>gift</div></div><div><div>Gift boxes that look like they came from a very good neighbor.</div><div></div></div><div><div>A dedicated block can convert holiday traffic with curated tiers, stronger product storytelling, and clear bundle values.</div><div></div></div><div><div>This section is separate from the product shelf so merchandising can swap gift collections independently.</div><div></div></div><div><div></div><div>Host gift</div><div>Riverfront Sampler</div><div>Summer sausage, mustard, crackers, and snackable Wisconsin staples.</div><div>From </div><div><a href=\"#\">Order now</a></div></div><div><div></div><div>Tailgate</div><div>Game Day Crate</div><div>Brats, smoked links, cheese pairings, and a cold-pack shipping story.</div><div>From </div><div><a href=\"#\">Order now</a></div></div><div><div></div><div>Classic</div><div>Old World Deluxe</div><div>A bigger box for family tables, client gifts, and holiday traditions.</div><div>From </div><div><a href=\"#\">Order now</a></div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Store Visit",
+          "id": "store-visit",
+          "model": "store-visit",
+          "plugins": {
+            "da": {
+              "rows": 8,
+              "columns": 3,
+              "unsafeHTML": "<div class=\"store-visit\"><div><div>Visit the counter</div><div>Milwaukee's oldest butcher shop is still open for business.</div></div><div><div>For a heritage food brand, physical retail is not secondary. It is proof, memory, and a reason to trust the online order.</div><div></div></div><div><div>clock-3</div><div>Retail hours</div><div>Monday through Saturday, 9:00 AM to 4:00 PM.</div></div><div><div>store</div><div>Counter service</div><div>Shop deli meats, sausages, seasonal gifts, and local favorites.</div></div><div><div>navigation</div><div>Milwaukee</div><div>A riverfront destination with a century-plus story attached.</div></div><div><div><a href=\"https://www.usinger.com/\">Plan a visit</a></div><div><a href=\"#shop\">Shop online</a></div></div><div><div></div><div></div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Newsletter Footer",
+          "id": "newsletter-footer",
+          "model": "newsletter-footer",
+          "plugins": {
+            "da": {
+              "rows": 4,
+              "columns": 2,
+              "unsafeHTML": "<div class=\"newsletter-footer\"><div><div>mail</div><div>Keep the counter warm</div></div><div><div>Recipes, gift deadlines, and sausage lore worth opening.</div><div></div></div><div><div>Invite shoppers into the brand after the first visit with recipe drops, holiday cutoff reminders, and limited-run smokehouse releases.</div><div></div></div><div><div><a href=\"/privacy\">Privacy policy</a></div><div><a href=\"/terms\">Terms</a></div></div></div>"
+            }
+          }
+        },
+        {
+          "title": "Cold Bar",
+          "id": "cold-bar",
+          "model": "cold-bar",
+          "plugins": {
+            "da": {
+              "rows": 2,
+              "columns": 2,
+              "unsafeHTML": "<div class=\"cold-bar\"><div><div>6</div><div>Minimum weight in lbs to unlock checkout</div></div><div><div>Schedule cold shipment</div><div><a href=\"/shop/cart\">Go to cart</a></div></div></div>"
+            }
+          }
+        }
+      ]
     }
   ]
 }

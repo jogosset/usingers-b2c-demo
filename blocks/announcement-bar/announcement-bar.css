@@ -1,0 +1,35 @@
+.announcement-bar {
+  background: var(--usinger-deep-red, #6f1715);
+  color: var(--usinger-paper-strong, #fff8ea);
+  overflow: hidden;
+}
+
+.announcement-bar .ticker {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.announcement-bar .ticker-track {
+  animation: usinger-ticker 32s linear infinite;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 32px;
+  min-width: 100%;
+  padding: 9px 16px;
+}
+
+.announcement-bar .ticker-item {
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.84rem;
+  font-weight: 800;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.announcement-bar .ticker-item .icon {
+  color: var(--usinger-mustard, #e7ba45);
+  height: 15px;
+  width: 15px;
+}
