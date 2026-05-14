@@ -16,9 +16,8 @@ export default function decorate(block) {
   // ── Left panel ──────────────────────────────────────
   // Row 0: background image (optional)
   const bgPicture       = rows[0]?.querySelector('picture');
-  // Row 1: eyebrow text | eyebrow icon
+  // Row 1: eyebrow text
   const eyebrow         = rows[1]?.children[0]?.textContent?.trim();
-  const eyebrowIconCell = rows[1]?.children[1];
   // Row 2: H1 heading
   const heading         = rows[2]?.children[0]?.textContent?.trim();
   // Row 3: body paragraph
@@ -52,10 +51,7 @@ export default function decorate(block) {
     <div class="counter-left">
       ${bgPicture ? `<div class="counter-bg" aria-hidden="true">${bgPicture.outerHTML}</div>` : ''}
       <div class="counter-left-head">
-        <span class="counter-eyebrow">
-          ${renderIcon(eyebrowIconCell)}
-          ${eyebrow || ''}
-        </span>
+        <span class="counter-eyebrow">${eyebrow || ''}</span>
         <h1>${heading || ''}</h1>
         <p>${body || ''}</p>
       </div>

@@ -6066,13 +6066,6 @@
         "label": "Eyebrow text"
       },
       {
-        "component": "reference",
-        "name": "eyebrow-icon",
-        "label": "Eyebrow icon",
-        "multi": false,
-        "valueType": "string"
-      },
-      {
         "component": "text",
         "name": "heading",
         "label": "Heading (H1)"
