@@ -6140,13 +6140,6 @@
         "multi": false
       },
       {
-        "component": "reference",
-        "name": "icon",
-        "label": "Icon image",
-        "multi": false,
-        "valueType": "string"
-      },
-      {
         "component": "text",
         "name": "heading",
         "label": "Card heading"

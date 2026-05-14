@@ -54,18 +54,6 @@
   z-index: 2;
 }
 
-.shop-paths .path-content .icon,
-.shop-paths .path-content .block-icon {
-  align-self: center;
-  color: var(--usinger-mustard, #e7ba45);
-  height: 26px;
-  justify-self: start;
-  width: 26px;
-}
-
-.shop-paths .path-link {
-  align-items: center;
-}
 
 .shop-paths .path-content h3 {
   font-family: var(--usinger-display, "Fraunces", Georgia, serif);
