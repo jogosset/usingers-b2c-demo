@@ -1,7 +1,14 @@
+.announcement-bar-wrapper,
+.announcement-bar-container {
+  max-width: unset;
+  padding: 0;
+}
+
 .announcement-bar {
   background: var(--usinger-deep-red, #6f1715);
   color: var(--usinger-paper-strong, #fff8ea);
   overflow: hidden;
+  width: 100%;
 }
 
 .announcement-bar .ticker {
