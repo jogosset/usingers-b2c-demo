@@ -238,7 +238,21 @@ html {
   50%       { box-shadow: 0 14px 26px rgba(47, 67, 45, 0.3), 0 0 0 5px rgba(47, 67, 45, 0.18); }
 }
 
-/* ── Usinger image-based icon (.block-icon) ──────────── */
+/* ── Usinger icon centering — applies to both Lucide SVG spans and DAM images ── */
+
+/* Lucide SVG icon span — flex-centered so SVG sits flush in the em box */
+.icon {
+  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.icon svg {
+  display: block;
+}
+
+/* DAM image icon */
 .block-icon {
   align-items: center;
   display: inline-flex;

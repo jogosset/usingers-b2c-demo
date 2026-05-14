@@ -21,7 +21,15 @@
 }
 
 .store-visit .visit-fact { border-top: 1px solid rgba(36, 24, 18, 0.16); display: grid; gap: 8px; padding-top: 14px; }
-.store-visit .visit-fact .icon { color: var(--usinger-red, #9f241f); height: 22px; width: 22px; }
+
+.store-visit .visit-fact .icon,
+.store-visit .visit-fact .block-icon {
+  align-self: center;
+  color: var(--usinger-red, #9f241f);
+  height: 22px;
+  justify-self: start;
+  width: 22px;
+}
 .store-visit .visit-fact strong { font-size: 1.04rem; text-transform: uppercase; }
 .store-visit .visit-fact span { color: var(--usinger-ink-soft, #5f4d43); line-height: 1.34; }
 
