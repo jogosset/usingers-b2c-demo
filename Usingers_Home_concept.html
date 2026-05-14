@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://localhost:8765/usinger-ecommerce-concept.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usinger's Market Home Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Usinger&#39;s Market Home Concept_files/css2" rel="stylesheet">
+  <script src="./Usinger&#39;s Market Home Concept_files/lucide.min.js"></script>
+  <style>
+    /*
+      Locked design system:
+      Palette: Usinger red, butcher ink, paper cream, smoke sage, mustard brass, river teal.
+      Typography: Fraunces for heritage display, IBM Plex Sans Condensed for precise commerce UI.
+      Visual tone: old-world Milwaukee sausage counter, modern cold-chain commerce, warm tactile catalog.
+    */
+    :root {
+      --usinger-red: #9f241f;
+      --deep-red: #6f1715;
+      --hot-red: #c63a2e;
+      --paper: #f4ead9;
+      --paper-strong: #fff8ea;
+      --paper-soft: #efe0c7;
+      --ink: #241812;
+      --ink-soft: #5f4d43;
+      --sage: #6f805d;
+      --sage-deep: #2f432d;
+      --mustard: #e7ba45;
+      --mustard-soft: #f5db8a;
+      --river: #276d72;
+      --river-deep: #154b50;
+      --line: rgba(36, 24, 18, 0.16);
+      --line-strong: rgba(36, 24, 18, 0.28);
+      --white-line: rgba(255, 248, 234, 0.28);
+      --shadow: 0 28px 70px rgba(66, 34, 22, 0.2);
+      --shadow-soft: 0 16px 34px rgba(66, 34, 22, 0.12);
+      --display: "Fraunces", Georgia, serif;
+      --sans: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+      --radius: 8px;
+      --max: 1460px;
+      --hero-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Grilling_Sausages_(Unsplash).jpg?width=1800");
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(159, 36, 31, 0.05) 1px, transparent 1px) 0 0 / 32px 32px,
+        linear-gradient(0deg, rgba(159, 36, 31, 0.045) 1px, transparent 1px) 0 0 / 32px 32px,
+        radial-gradient(circle at 12% 4%, rgba(231, 186, 69, 0.22), transparent 30%),
+        radial-gradient(circle at 90% 8%, rgba(39, 109, 114, 0.14), transparent 28%),
+        var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      letter-spacing: 0;
+      min-width: 320px;
+    }
+
+    body::before {
+      background:
+        repeating-linear-gradient(115deg, rgba(36, 24, 18, 0.018) 0 1px, transparent 1px 13px),
+        radial-gradient(circle at center, transparent, rgba(36, 24, 18, 0.08));
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: fixed;
+      z-index: 100;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+      letter-spacing: 0;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .block {
+      position: relative;
+    }
+
+    .section-inner {
+      margin: 0 auto;
+      max-width: var(--max);
+      padding-left: 28px;
+      padding-right: 28px;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      align-items: center;
+      color: var(--mustard);
+      display: inline-flex;
+      font-size: 0.88rem;
+      font-weight: 800;
+      gap: 8px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow.dark {
+      color: var(--usinger-red);
+    }
+
+    .section-kicker {
+      color: var(--usinger-red);
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 0.92;
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .section-lede {
+      color: var(--ink-soft);
+      font-size: 1.18rem;
+      line-height: 1.45;
+      margin: 16px 0 0;
+      max-width: 620px;
+    }
+
+    .primary-action,
+    .secondary-action,
+    .ghost-action,
+    .chip,
+    .nav-search button,
+    .cart-button {
+      align-items: center;
+      border: 0;
+      border-radius: var(--radius);
+      display: inline-flex;
+      font-weight: 800;
+      gap: 8px;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      text-transform: uppercase;
+      transition: background 220ms ease, color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+      white-space: nowrap;
+    }
+
+    .primary-action {
+      background: var(--usinger-red);
+      box-shadow: 0 14px 26px rgba(111, 23, 21, 0.24);
+      color: #fff;
+    }
+
+    .primary-action:hover {
+      background: var(--hot-red);
+      transform: translateY(-2px);
+    }
+
+    .secondary-action {
+      background: var(--ink);
+      color: var(--paper-strong);
+    }
+
+    .secondary-action:hover {
+      background: var(--river-deep);
+      transform: translateY(-2px);
+    }
+
+    .ghost-action {
+      background: rgba(255, 248, 234, 0.12);
+      border: 1px solid rgba(255, 248, 234, 0.35);
+      color: var(--paper-strong);
+    }
+
+    .ghost-action:hover {
+      background: var(--paper-strong);
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .icon {
+      height: 18px;
+      width: 18px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger > * {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 650ms ease, transform 650ms ease;
+    }
+
+    .reveal.is-visible .stagger > *:nth-child(1) {
+      transition-delay: 70ms;
+    }
+
+    .reveal.is-visible .stagger > *:nth-child(2) {
+      transition-delay: 150ms;
+    }
+
+    .reveal.is-visible .stagger > *:nth-child(3) {
+      transition-delay: 230ms;
+    }
+
+    .reveal.is-visible .stagger > *:nth-child(4) {
+      transition-delay: 310ms;
+    }
+
+    .reveal.is-visible .stagger > *:nth-child(5) {
+      transition-delay: 390ms;
+    }
+
+    .reveal.is-visible .stagger > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes tickerMove {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes heroDrift {
+      0% {
+        transform: scale(1.04) translate3d(0, 0, 0);
+      }
+      50% {
+        transform: scale(1.1) translate3d(-12px, -8px, 0);
+      }
+      100% {
+        transform: scale(1.04) translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes stampTurn {
+      0%,
+      100% {
+        transform: rotate(-5deg) scale(1);
+      }
+      50% {
+        transform: rotate(2deg) scale(1.035);
+      }
+    }
+
+    @keyframes steamLift {
+      0% {
+        opacity: 0;
+        transform: translateY(18px) scaleX(0.88);
+      }
+      35% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-90px) scaleX(1.16);
+      }
+    }
+
+    @keyframes progressSheen {
+      0% {
+        transform: translateX(-120%);
+      }
+      100% {
+        transform: translateX(220%);
+      }
+    }
+
+    /* block: announcement-bar */
+    .announcement-block {
+      background: var(--deep-red);
+      color: var(--paper-strong);
+      overflow: hidden;
+    }
+
+    .ticker {
+      display: flex;
+      gap: 28px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      animation: tickerMove 30s linear infinite;
+      display: flex;
+      flex: 0 0 auto;
+      gap: 28px;
+      min-width: 100%;
+      padding: 8px 0;
+    }
+
+    .ticker-item {
+      align-items: center;
+      display: inline-flex;
+      font-size: 0.86rem;
+      font-weight: 800;
+      gap: 9px;
+      text-transform: uppercase;
+    }
+
+    .ticker-item .icon {
+      color: var(--mustard);
+      height: 16px;
+      width: 16px;
+    }
+
+    /* block: header */
+    .site-header {
+      backdrop-filter: blur(16px);
+      background: rgba(255, 248, 234, 0.92);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .nav {
+      align-items: center;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: auto minmax(260px, 1fr) auto;
+      margin: 0 auto;
+      max-width: var(--max);
+      padding: 18px 28px;
+    }
+
+    .brand {
+      align-items: center;
+      display: flex;
+      gap: 14px;
+      min-width: 240px;
+    }
+
+    .brand img {
+      width: 172px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: color 180ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--usinger-red);
+    }
+
+    .nav-actions {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .nav-search {
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      display: grid;
+      grid-template-columns: auto minmax(160px, 1fr) auto;
+      min-width: 430px;
+      overflow: hidden;
+    }
+
+    .nav-search .icon {
+      color: var(--ink-soft);
+      margin-left: 14px;
+    }
+
+    .nav-search input {
+      background: transparent;
+      border: 0;
+      color: var(--ink);
+      min-width: 0;
+      outline: 0;
+      padding: 13px 12px;
+    }
+
+    .nav-search button {
+      background: var(--usinger-red);
+      border-radius: 0;
+      color: #fff;
+      min-height: 48px;
+    }
+
+    .cart-button {
+      background: var(--sage-deep);
+      color: #fff;
+      min-width: 130px;
+      position: relative;
+    }
+
+    .cart-button small {
+      background: var(--mustard);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 0.76rem;
+      line-height: 1;
+      min-width: 22px;
+      padding: 5px 7px;
+      text-align: center;
+    }
+
+    /* block: hero */
+    .hero-block {
+      color: var(--paper-strong);
+      isolation: isolate;
+      min-height: 740px;
+      overflow: hidden;
+    }
+
+    .hero-block::before {
+      animation: heroDrift 18s ease-in-out infinite;
+      background: var(--hero-image) center / cover;
+      content: "";
+      inset: -3%;
+      position: absolute;
+      z-index: -3;
+    }
+
+    .hero-block::after {
+      background:
+        radial-gradient(circle at 74% 18%, rgba(231, 186, 69, 0.3), transparent 20%),
+        linear-gradient(90deg, rgba(36, 24, 18, 0.92) 0%, rgba(36, 24, 18, 0.72) 46%, rgba(36, 24, 18, 0.18) 100%),
+        linear-gradient(0deg, rgba(111, 23, 21, 0.5), transparent 55%);
+      content: "";
+      inset: 0;
+      position: absolute;
+      z-index: -2;
+    }
+
+    .hero-inner {
+      display: grid;
+      gap: 34px;
+      grid-template-columns: minmax(0, 1.05fr) 410px;
+      min-height: 740px;
+      padding-bottom: 52px;
+      padding-top: 64px;
+    }
+
+    .hero-copy {
+      align-content: center;
+      display: grid;
+      gap: 22px;
+      max-width: 820px;
+    }
+
+    .hero-copy h1 {
+      font-family: var(--display);
+      font-size: 6rem;
+      font-weight: 800;
+      line-height: 0.85;
+      margin: 0;
+      max-width: 800px;
+      text-wrap: balance;
+    }
+
+    .hero-copy p {
+      color: rgba(255, 248, 234, 0.86);
+      font-size: 1.3rem;
+      line-height: 1.42;
+      margin: 0;
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-proof {
+      align-items: stretch;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 12px;
+      max-width: 780px;
+    }
+
+    .proof-tile {
+      border-left: 1px solid rgba(255, 248, 234, 0.28);
+      padding-left: 16px;
+    }
+
+    .proof-tile strong {
+      color: var(--mustard);
+      display: block;
+      font-family: var(--display);
+      font-size: 2.1rem;
+      line-height: 1;
+    }
+
+    .proof-tile span {
+      color: rgba(255, 248, 234, 0.78);
+      display: block;
+      line-height: 1.32;
+      margin-top: 5px;
+    }
+
+    .hero-panel {
+      align-self: center;
+      background: rgba(255, 248, 234, 0.94);
+      border: 1px solid rgba(255, 248, 234, 0.5);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      color: var(--ink);
+      display: grid;
+      gap: 16px;
+      overflow: hidden;
+    }
+
+    .hero-panel-media {
+      background:
+        linear-gradient(180deg, rgba(255, 248, 234, 0), rgba(36, 24, 18, 0.52)),
+        var(--hero-image) center / cover;
+      min-height: 210px;
+      position: relative;
+    }
+
+    .hero-stamp {
+      animation: stampTurn 5s ease-in-out infinite;
+      background: var(--mustard);
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      color: var(--ink);
+      display: grid;
+      font-weight: 900;
+      height: 108px;
+      line-height: 0.95;
+      padding: 18px;
+      place-items: center;
+      position: absolute;
+      right: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      top: 18px;
+      width: 108px;
+    }
+
+    .steam {
+      inset: auto 0 12px auto;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .steam span {
+      animation: steamLift 3.8s ease-in-out infinite;
+      background: rgba(255, 248, 234, 0.7);
+      border-radius: 999px;
+      display: block;
+      filter: blur(10px);
+      height: 90px;
+      margin-right: 54px;
+      width: 18px;
+    }
+
+    .steam span:nth-child(2) {
+      animation-delay: 900ms;
+      margin-left: 72px;
+      margin-top: -64px;
+    }
+
+    .steam span:nth-child(3) {
+      animation-delay: 1600ms;
+      margin-left: 132px;
+      margin-top: -72px;
+    }
+
+    .hero-panel-body {
+      display: grid;
+      gap: 16px;
+      padding: 22px;
+    }
+
+    .hero-panel-body h2 {
+      font-family: var(--display);
+      font-size: 2.2rem;
+      line-height: 0.95;
+      margin: 0;
+    }
+
+    .panel-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .panel-list li {
+      align-items: center;
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding-top: 10px;
+    }
+
+    .panel-list .icon {
+      color: var(--usinger-red);
+      flex: 0 0 auto;
+    }
+
+    /* block: shop-paths */
+    .shop-paths-block {
+      padding: 74px 0 34px;
+    }
+
+    .path-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 28px;
+    }
+
+    .path-card {
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      min-height: 360px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 260ms ease, box-shadow 260ms ease;
+    }
+
+    .path-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-6px);
+    }
+
+    .path-card::before {
+      background:
+        linear-gradient(180deg, rgba(36, 24, 18, 0.04), rgba(36, 24, 18, 0.68)),
+        var(--hero-image) var(--path-position, center) / cover;
+      content: "";
+      inset: 0;
+      position: absolute;
+      transition: transform 700ms ease;
+    }
+
+    .path-card:hover::before {
+      transform: scale(1.06);
+    }
+
+    .path-card::after {
+      background: linear-gradient(0deg, rgba(36, 24, 18, 0.92), transparent 64%);
+      content: "";
+      inset: 0;
+      position: absolute;
+    }
+
+    .path-content {
+      align-self: end;
+      color: #fff;
+      display: grid;
+      gap: 10px;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .path-content .icon {
+      color: var(--mustard);
+      height: 24px;
+      width: 24px;
+    }
+
+    .path-content h3 {
+      font-family: var(--display);
+      font-size: 2.35rem;
+      line-height: 0.96;
+      margin: 0;
+    }
+
+    .path-content p {
+      color: rgba(255, 248, 234, 0.82);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .path-link {
+      align-items: center;
+      color: var(--mustard);
+      display: inline-flex;
+      font-weight: 900;
+      gap: 6px;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    /* block: featured-products */
+    .featured-products-block {
+      padding: 54px 0 82px;
+    }
+
+    .feature-header {
+      align-items: end;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      min-height: 42px;
+      padding: 0 14px;
+    }
+
+    .chip.active {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .product-shelf {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 30px;
+    }
+
+    .product-card {
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 24px rgba(66, 34, 22, 0.08);
+      display: grid;
+      grid-template-rows: 220px 1fr auto;
+      min-width: 0;
+      overflow: hidden;
+      transition: transform 240ms ease, box-shadow 240ms ease;
+    }
+
+    .product-card:hover {
+      box-shadow: var(--shadow-soft);
+      transform: translateY(-5px);
+    }
+
+    .product-photo {
+      align-items: end;
+      background:
+        linear-gradient(180deg, rgba(255, 248, 234, 0.08), rgba(36, 24, 18, 0.5)),
+        var(--hero-image) var(--product-position, center) / cover;
+      display: flex;
+      padding: 14px;
+    }
+
+    .badge {
+      background: var(--mustard);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 900;
+      padding: 7px 10px;
+      text-transform: uppercase;
+    }
+
+    .product-body {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+    }
+
+    .product-body h3 {
+      font-family: var(--display);
+      font-size: 1.55rem;
+      line-height: 1.02;
+      margin: 0;
+    }
+
+    .product-body p {
+      color: var(--ink-soft);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .meta-row {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--usinger-red);
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .unit {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .product-actions {
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 104px 1fr;
+      padding: 14px;
+    }
+
+    .stepper {
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      display: grid;
+      grid-template-columns: 32px 1fr 32px;
+      min-height: 42px;
+      overflow: hidden;
+    }
+
+    .stepper button {
+      background: #fff;
+      border: 0;
+      color: var(--ink);
+      display: grid;
+      height: 100%;
+      place-items: center;
+    }
+
+    .stepper output {
+      background: var(--paper);
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .add-button {
+      background: var(--usinger-red);
+      border: 0;
+      border-radius: var(--radius);
+      color: #fff;
+      font-weight: 900;
+      min-height: 42px;
+      text-transform: uppercase;
+      transition: background 180ms ease, transform 180ms ease;
+    }
+
+    .add-button:hover {
+      background: var(--hot-red);
+      transform: translateY(-1px);
+    }
+
+    /* block: build-a-box */
+    .build-box-block {
+      background:
+        linear-gradient(115deg, rgba(47, 67, 45, 0.96), rgba(21, 75, 80, 0.95)),
+        radial-gradient(circle at 24% 22%, rgba(231, 186, 69, 0.28), transparent 30%);
+      color: var(--paper-strong);
+      overflow: hidden;
+      padding: 86px 0;
+    }
+
+    .build-box-block::before {
+      background:
+        repeating-linear-gradient(90deg, transparent 0 28px, rgba(255, 248, 234, 0.06) 28px 29px),
+        repeating-linear-gradient(0deg, transparent 0 28px, rgba(255, 248, 234, 0.05) 28px 29px);
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .box-grid {
+      display: grid;
+      gap: 36px;
+      grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1.1fr);
+      position: relative;
+      z-index: 1;
+    }
+
+    .box-copy .section-title,
+    .box-copy .section-lede {
+      color: inherit;
+    }
+
+    .box-copy .section-lede {
+      color: rgba(255, 248, 234, 0.78);
+    }
+
+    .box-steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .box-step {
+      align-items: start;
+      border-top: 1px solid var(--white-line);
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 44px 1fr;
+      padding-top: 16px;
+    }
+
+    .box-step strong {
+      align-items: center;
+      background: var(--mustard);
+      border-radius: 999px;
+      color: var(--ink);
+      display: inline-grid;
+      height: 34px;
+      place-items: center;
+      width: 34px;
+    }
+
+    .box-step h3 {
+      font-family: var(--display);
+      font-size: 1.38rem;
+      line-height: 1.02;
+      margin: 0 0 4px;
+    }
+
+    .box-step p {
+      color: rgba(255, 248, 234, 0.72);
+      line-height: 1.38;
+      margin: 0;
+    }
+
+    .box-panel {
+      background: var(--paper-strong);
+      border: 1px solid rgba(255, 248, 234, 0.44);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    .box-panel-head {
+      align-items: center;
+      background: var(--ink);
+      color: var(--paper-strong);
+      display: flex;
+      justify-content: space-between;
+      padding: 22px;
+    }
+
+    .box-panel-head h3 {
+      font-family: var(--display);
+      font-size: 2rem;
+      line-height: 1;
+      margin: 0;
+    }
+
+    .progress-wrap {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+    }
+
+    .progress-stat {
+      align-items: end;
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    .progress-stat strong {
+      color: var(--usinger-red);
+      font-family: var(--display);
+      font-size: 3.6rem;
+      line-height: 0.9;
+    }
+
+    .progress-stat span {
+      color: var(--ink-soft);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .progress-bar {
+      background: rgba(36, 24, 18, 0.12);
+      border-radius: 999px;
+      height: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar span {
+      background: linear-gradient(90deg, var(--usinger-red), var(--mustard));
+      border-radius: inherit;
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      transition: width 420ms ease;
+      width: 0%;
+    }
+
+    .progress-bar span::after {
+      animation: progressSheen 2.4s ease-in-out infinite;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.52), transparent);
+      content: "";
+      inset: 0;
+      position: absolute;
+      width: 36%;
+    }
+
+    .cart-lines {
+      display: grid;
+      gap: 12px;
+      min-height: 150px;
+      padding: 0 22px 18px;
+    }
+
+    .empty-cart {
+      background: var(--paper);
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius);
+      color: var(--ink-soft);
+      line-height: 1.38;
+      margin: 0;
+      padding: 16px;
+    }
+
+    .cart-line {
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 4px;
+      grid-template-columns: 1fr auto;
+      padding-top: 12px;
+    }
+
+    .cart-line span {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .cart-total {
+      background: var(--paper);
+      display: grid;
+      gap: 12px;
+      padding: 20px 22px 24px;
+    }
+
+    .total-row {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .total-row strong {
+      font-size: 1.55rem;
+      font-weight: 900;
+    }
+
+    .shipping-note {
+      background: rgba(231, 186, 69, 0.22);
+      border: 1px solid rgba(159, 36, 31, 0.16);
+      border-radius: var(--radius);
+      color: var(--deep-red);
+      font-weight: 800;
+      line-height: 1.35;
+      padding: 12px;
+    }
+
+    /* block: heritage-story */
+    .heritage-block {
+      padding: 90px 0;
+    }
+
+    .heritage-grid {
+      align-items: stretch;
+      display: grid;
+      gap: 26px;
+      grid-template-columns: 0.88fr 1.12fr;
+    }
+
+    .heritage-media {
+      background:
+        linear-gradient(180deg, rgba(36, 24, 18, 0.08), rgba(36, 24, 18, 0.72)),
+        var(--hero-image) 60% center / cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      min-height: 560px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .heritage-label {
+      background: var(--paper-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      bottom: 24px;
+      color: var(--ink);
+      display: grid;
+      gap: 6px;
+      left: 24px;
+      max-width: 290px;
+      padding: 20px;
+      position: absolute;
+    }
+
+    .heritage-label strong {
+      color: var(--usinger-red);
+      font-family: var(--display);
+      font-size: 2.6rem;
+      line-height: 1;
+    }
+
+    .heritage-label span {
+      color: var(--ink-soft);
+      line-height: 1.34;
+    }
+
+    .heritage-content {
+      align-content: center;
+      display: grid;
+      gap: 24px;
+    }
+
+    .timeline {
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 0;
+    }
+
+    .timeline-item {
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 90px 1fr;
+      padding: 20px 0;
+    }
+
+    .timeline-item strong {
+      color: var(--usinger-red);
+      font-family: var(--display);
+      font-size: 1.55rem;
+      line-height: 1;
+    }
+
+    .timeline-item h3 {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      line-height: 1;
+      margin: 0 0 6px;
+    }
+
+    .timeline-item p {
+      color: var(--ink-soft);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* block: gift-builder */
+    .gift-block {
+      background:
+        linear-gradient(90deg, rgba(111, 23, 21, 0.95), rgba(159, 36, 31, 0.92)),
+        radial-gradient(circle at 85% 20%, rgba(231, 186, 69, 0.3), transparent 28%);
+      color: var(--paper-strong);
+      overflow: hidden;
+      padding: 86px 0;
+    }
+
+    .gift-block::before {
+      background:
+        linear-gradient(135deg, rgba(255, 248, 234, 0.08) 25%, transparent 25%) 0 0 / 34px 34px,
+        linear-gradient(225deg, rgba(255, 248, 234, 0.08) 25%, transparent 25%) 0 0 / 34px 34px;
+      content: "";
+      inset: 0;
+      opacity: 0.45;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .gift-header {
+      align-items: end;
+      display: grid;
+      gap: 26px;
+      grid-template-columns: minmax(0, 1fr) 340px;
+    }
+
+    .gift-header .section-title,
+    .gift-header .section-lede {
+      color: inherit;
+    }
+
+    .gift-header .section-lede {
+      color: rgba(255, 248, 234, 0.78);
+    }
+
+    .gift-note {
+      background: rgba(255, 248, 234, 0.12);
+      border: 1px solid var(--white-line);
+      border-radius: var(--radius);
+      color: rgba(255, 248, 234, 0.86);
+      line-height: 1.38;
+      padding: 18px;
+    }
+
+    .gift-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 30px;
+    }
+
+    .gift-card {
+      background: var(--paper-strong);
+      border-radius: var(--radius);
+      color: var(--ink);
+      display: grid;
+      min-height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gift-card::before {
+      background:
+        linear-gradient(180deg, rgba(36, 24, 18, 0.02), rgba(36, 24, 18, 0.45)),
+        var(--hero-image) var(--gift-position, center) / cover;
+      content: "";
+      inset: 0 0 38%;
+      position: absolute;
+      transition: transform 620ms ease;
+    }
+
+    .gift-card:hover::before {
+      transform: scale(1.06);
+    }
+
+    .gift-card-content {
+      align-self: end;
+      display: grid;
+      gap: 10px;
+      padding: 168px 22px 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gift-card h3 {
+      font-family: var(--display);
+      font-size: 1.85rem;
+      line-height: 0.98;
+      margin: 0;
+    }
+
+    .gift-card p {
+      color: var(--ink-soft);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .gift-card strong {
+      color: var(--usinger-red);
+      font-size: 1.2rem;
+    }
+
+    /* block: store-visit */
+    .visit-block {
+      padding: 90px 0;
+    }
+
+    .visit-shell {
+      background:
+        linear-gradient(90deg, var(--paper-strong), rgba(255, 248, 234, 0.88)),
+        radial-gradient(circle at 100% 0%, rgba(39, 109, 114, 0.18), transparent 36%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 0;
+      grid-template-columns: minmax(0, 1fr) 420px;
+      overflow: hidden;
+    }
+
+    .visit-copy {
+      display: grid;
+      gap: 22px;
+      padding: 44px;
+    }
+
+    .visit-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .visit-facts {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .visit-fact {
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 8px;
+      padding-top: 14px;
+    }
+
+    .visit-fact .icon {
+      color: var(--usinger-red);
+      height: 22px;
+      width: 22px;
+    }
+
+    .visit-fact strong {
+      font-size: 1.04rem;
+      text-transform: uppercase;
+    }
+
+    .visit-fact span {
+      color: var(--ink-soft);
+      line-height: 1.34;
+    }
+
+    .visit-map {
+      background:
+        linear-gradient(180deg, rgba(36, 24, 18, 0.08), rgba(36, 24, 18, 0.62)),
+        var(--hero-image) center / cover;
+      min-height: 420px;
+      position: relative;
+    }
+
+    .map-pin {
+      background: var(--mustard);
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      box-shadow: var(--shadow-soft);
+      color: var(--ink);
+      display: grid;
+      font-weight: 900;
+      left: 50%;
+      padding: 13px 16px;
+      place-items: center;
+      position: absolute;
+      text-transform: uppercase;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-4deg);
+      white-space: nowrap;
+    }
+
+    /* block: newsletter-footer */
+    .footer-cta-block {
+      background: var(--ink);
+      color: var(--paper-strong);
+      overflow: hidden;
+      padding: 68px 0 34px;
+    }
+
+    .footer-cta-block::before {
+      background:
+        radial-gradient(circle at 16% 0%, rgba(231, 186, 69, 0.18), transparent 32%),
+        radial-gradient(circle at 92% 22%, rgba(39, 109, 114, 0.28), transparent 34%);
+      content: "";
+      inset: 0;
+      position: absolute;
+    }
+
+    .footer-grid {
+      align-items: start;
+      display: grid;
+      gap: 34px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid h2 {
+      font-family: var(--display);
+      font-size: 4rem;
+      line-height: 0.92;
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .newsletter {
+      background: rgba(255, 248, 234, 0.08);
+      border: 1px solid var(--white-line);
+      border-radius: var(--radius);
+      display: grid;
+      gap: 16px;
+      padding: 22px;
+    }
+
+    .newsletter p {
+      color: rgba(255, 248, 234, 0.74);
+      line-height: 1.42;
+      margin: 0;
+    }
+
+    .newsletter-form {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr auto;
+    }
+
+    .newsletter-form input {
+      background: var(--paper-strong);
+      border: 0;
+      border-radius: var(--radius);
+      color: var(--ink);
+      min-height: 48px;
+      min-width: 0;
+      padding: 0 14px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 248, 234, 0.16);
+      color: rgba(255, 248, 234, 0.62);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: space-between;
+      margin-top: 46px;
+      padding-top: 22px;
+    }
+
+    @media (max-width: 1180px) {
+      .nav {
+        grid-template-columns: auto 1fr;
+      }
+
+      .nav-actions {
+        grid-column: 1 / -1;
+      }
+
+      .nav-search {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .hero-inner,
+      .box-grid,
+      .heritage-grid,
+      .gift-header,
+      .visit-shell,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        align-self: stretch;
+        max-width: 560px;
+      }
+
+      .product-shelf {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .visit-map {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .section-inner {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .section-title {
+        font-size: 3rem;
+      }
+
+      .nav {
+        gap: 14px;
+        padding: 14px 18px;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .brand img {
+        width: 142px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .cart-button span {
+        display: none;
+      }
+
+      .hero-block,
+      .hero-inner {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        gap: 26px;
+        padding-bottom: 42px;
+        padding-top: 48px;
+      }
+
+      .hero-copy h1 {
+        font-size: 4rem;
+      }
+
+      .hero-copy p {
+        font-size: 1.12rem;
+      }
+
+      .hero-proof,
+      .path-grid,
+      .gift-grid,
+      .visit-facts {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-header {
+        align-items: start;
+        grid-template-columns: 1fr;
+      }
+
+      .chips {
+        justify-content: flex-start;
+      }
+
+      .heritage-media {
+        min-height: 420px;
+      }
+
+      .visit-copy {
+        padding: 28px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 16px;
+      }
+
+      .section-title,
+      .footer-grid h2 {
+        font-size: 2.45rem;
+      }
+
+      .hero-copy h1 {
+        font-size: 3rem;
+      }
+
+      .hero-actions,
+      .visit-actions,
+      .newsletter-form {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions,
+      .visit-actions {
+        display: grid;
+      }
+
+      .primary-action,
+      .secondary-action,
+      .ghost-action {
+        width: 100%;
+      }
+
+      .product-shelf {
+        grid-template-columns: 1fr;
+      }
+
+      .product-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .box-grid {
+        gap: 24px;
+      }
+
+      .progress-stat {
+        align-items: start;
+        display: grid;
+      }
+
+      .progress-stat strong {
+        font-size: 3rem;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+      }
+
+      .reveal,
+      .stagger > * {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- block: announcement-bar -->
+  <section class="block announcement-block" data-block="announcement-bar" aria-label="Store announcements">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock-3" aria-hidden="true" class="lucide lucide-clock-3 icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6h4"></path></svg> Retail store open Monday through Saturday, 9 AM to 4 PM</span>
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="snowflake" aria-hidden="true" class="lucide lucide-snowflake icon"><path d="m10 20-1.25-2.5L6 18"></path><path d="M10 4 8.75 6.5 6 6"></path><path d="m14 20 1.25-2.5L18 18"></path><path d="m14 4 1.25 2.5L18 6"></path><path d="m17 21-3-6h-4"></path><path d="m17 3-3 6 1.5 3"></path><path d="M2 12h6.5L10 9"></path><path d="m20 10-1.5 2 1.5 2"></path><path d="M22 12h-6.5L14 15"></path><path d="m4 10 1.5 2L4 14"></path><path d="m7 21 3-6-1.5-3"></path><path d="m7 3 3 6h4"></path></svg> Cold-packed deli orders start at 6 lb</span>
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin icon"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Milwaukee sausage makers since 1880</span>
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gift" aria-hidden="true" class="lucide lucide-gift icon"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg> Gift boxes built for holidays, hosts, and tailgates</span>
+      </div>
+      <div class="ticker-track">
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock-3" aria-hidden="true" class="lucide lucide-clock-3 icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6h4"></path></svg> Retail store open Monday through Saturday, 9 AM to 4 PM</span>
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="snowflake" aria-hidden="true" class="lucide lucide-snowflake icon"><path d="m10 20-1.25-2.5L6 18"></path><path d="M10 4 8.75 6.5 6 6"></path><path d="m14 20 1.25-2.5L18 18"></path><path d="m14 4 1.25 2.5L18 6"></path><path d="m17 21-3-6h-4"></path><path d="m17 3-3 6 1.5 3"></path><path d="M2 12h6.5L10 9"></path><path d="m20 10-1.5 2 1.5 2"></path><path d="M22 12h-6.5L14 15"></path><path d="m4 10 1.5 2L4 14"></path><path d="m7 21 3-6-1.5-3"></path><path d="m7 3 3 6h4"></path></svg> Cold-packed deli orders start at 6 lb</span>
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin icon"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Milwaukee sausage makers since 1880</span>
+        <span class="ticker-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gift" aria-hidden="true" class="lucide lucide-gift icon"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg> Gift boxes built for holidays, hosts, and tailgates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- block: header -->
+  <header class="block site-header" data-block="header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="https://www.usinger.com/" aria-label="Usinger&#39;s home">
+        <img src="./Usinger&#39;s Market Home Concept_files/logo_4_.png" alt="Usinger&#39;s Famous Sausage">
+      </a>
+      <div class="nav-links" aria-label="Shop shortcuts">
+        <a href="http://localhost:8765/usinger-ecommerce-concept.html#shop">Shop</a>
+        <a href="http://localhost:8765/usinger-ecommerce-concept.html#build">Build a box</a>
+        <a href="http://localhost:8765/usinger-ecommerce-concept.html#heritage">Heritage</a>
+        <a href="http://localhost:8765/usinger-ecommerce-concept.html#visit">Visit</a>
+      </div>
+      <div class="nav-actions">
+        <form class="nav-search" role="search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" aria-hidden="true" class="lucide lucide-search icon"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+          <input aria-label="Search products" value="bratwurst, bacon, gift boxes">
+          <button type="button">Search</button>
+        </form>
+        <button class="cart-button" type="button" aria-label="View cold box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-bag" aria-hidden="true" class="lucide lucide-shopping-bag icon"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg>
+          <span>Cold Box</span>
+          <small id="navCount">0</small>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- block: hero -->
+    <section class="block hero-block reveal is-visible" data-block="hero" aria-labelledby="hero-title">
+      <div class="section-inner hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flame" aria-hidden="true" class="lucide lucide-flame icon"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"></path></svg> Milwaukee since 1880</span>
+          <h1 id="hero-title">Old world sausage, built for the modern cart.</h1>
+          <p>Give Usinger's a homepage that feels like stepping up to the riverfront deli counter: smoky, generous, specific, and ready to ship cold.</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="http://localhost:8765/usinger-ecommerce-concept.html#shop"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-bag" aria-hidden="true" class="lucide lucide-shopping-bag icon"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg> Shop counter favorites</a>
+            <a class="ghost-action" href="http://localhost:8765/usinger-ecommerce-concept.html#build"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="package" aria-hidden="true" class="lucide lucide-package icon"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><path d="m7.5 4.27 9 5.15"></path></svg> Build a 6 lb box</a>
+          </div>
+          <div class="hero-proof stagger" aria-label="Brand proof points">
+            <div class="proof-tile"><strong>140+</strong><span>years of Milwaukee sausage making.</span></div>
+            <div class="proof-tile"><strong>70+</strong><span>old-world meats, brats, wieners, and gifts.</span></div>
+            <div class="proof-tile"><strong>6 lb</strong><span>clear deli minimum before checkout.</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Today&#39;s counter picks">
+          <div class="hero-panel-media">
+            <div class="hero-stamp">Famous<br>Sausage</div>
+            <div class="steam" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+          <div class="hero-panel-body">
+            <span class="section-kicker">Today's counter picks</span>
+            <h2>Brats, bacon, and smokehouse staples for one cold box.</h2>
+            <ul class="panel-list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check icon"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Make perishable shipping rules visible before checkout.</span></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gift" aria-hidden="true" class="lucide lucide-gift icon"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg><span>Surface giftable assortments beside everyday deli favorites.</span></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="truck" aria-hidden="true" class="lucide lucide-truck icon"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg><span>Frame cold shipment as a helpful, guided experience.</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- block: shop-paths -->
+    <section class="block shop-paths-block reveal is-visible" data-block="shop-paths" aria-labelledby="paths-title">
+      <div class="section-inner">
+        <span class="section-kicker">Choose your counter</span>
+        <h2 class="section-title" id="paths-title">Three clear ways into the store.</h2>
+        <p class="section-lede">The homepage should not ask shoppers to understand the full catalog first. It should invite them through the door they already know.</p>
+
+        <div class="path-grid stagger">
+          <a class="path-card" href="http://localhost:8765/usinger-ecommerce-concept.html#shop" style="--path-position: 28% center">
+            <div class="path-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flame" aria-hidden="true" class="lucide lucide-flame icon"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"></path></svg>
+              <h3>Grill-ready brats</h3>
+              <p>Fast paths to cooked bratwurst, smoked sausage, and tailgate staples.</p>
+              <span class="path-link">Shop the grill <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right icon"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+            </div>
+          </a>
+          <a class="path-card" href="http://localhost:8765/usinger-ecommerce-concept.html#build" style="--path-position: center">
+            <div class="path-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="snowflake" aria-hidden="true" class="lucide lucide-snowflake icon"><path d="m10 20-1.25-2.5L6 18"></path><path d="M10 4 8.75 6.5 6 6"></path><path d="m14 20 1.25-2.5L18 18"></path><path d="m14 4 1.25 2.5L18 6"></path><path d="m17 21-3-6h-4"></path><path d="m17 3-3 6 1.5 3"></path><path d="M2 12h6.5L10 9"></path><path d="m20 10-1.5 2 1.5 2"></path><path d="M22 12h-6.5L14 15"></path><path d="m4 10 1.5 2L4 14"></path><path d="m7 21 3-6-1.5-3"></path><path d="m7 3 3 6h4"></path></svg>
+              <h3>Deli cold box</h3>
+              <p>A guided cart that keeps the 6 lb minimum useful instead of surprising.</p>
+              <span class="path-link">Build the box <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right icon"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+            </div>
+          </a>
+          <a class="path-card" href="http://localhost:8765/usinger-ecommerce-concept.html#gifts" style="--path-position: 72% center">
+            <div class="path-content">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gift" aria-hidden="true" class="lucide lucide-gift icon"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg>
+              <h3>Wisconsin gifts</h3>
+              <p>Cheese, sausage, mustard, and host-ready bundles with a heritage feel.</p>
+              <span class="path-link">Send a classic <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right icon"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- block: featured-products -->
+    <section class="block featured-products-block reveal is-visible" data-block="featured-products" id="shop" aria-labelledby="featured-title">
+      <div class="section-inner">
+        <div class="feature-header">
+          <div>
+            <span class="section-kicker">Counter favorites</span>
+            <h2 class="section-title" id="featured-title">A shoppable shelf with real deli momentum.</h2>
+            <p class="section-lede">Add products to the cold box and watch the deli minimum update in the build section below.</p>
+          </div>
+          <div class="chips" role="group" aria-label="Product filters">
+            <button class="chip active" type="button" data-filter="all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles icon"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> Featured</button>
+            <button class="chip" type="button" data-filter="quick"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap icon"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg> Quick cook</button>
+            <button class="chip" type="button" data-filter="lean"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="leaf" aria-hidden="true" class="lucide lucide-leaf icon"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg> Lean</button>
+            <button class="chip" type="button" data-filter="spicy"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="flame" aria-hidden="true" class="lucide lucide-flame icon"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"></path></svg> Spicy</button>
+          </div>
+        </div>
+        <div class="product-shelf" id="productShelf" aria-live="polite">
+          <article class="product-card" data-id="u2147d">
+            <div class="product-photo" style="--product-position:20% center">
+              <span class="badge">Old World</span>
+            </div>
+            <div class="product-body">
+              <h3>Cooked Bratwurst</h3>
+              <p>Pork and veal bratwurst, fully cooked and ready for the pan or grill.</p>
+              <div class="meta-row">
+                <span class="price">$5.99</span>
+                <span class="unit">per 12 oz. package</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="stepper" aria-label="Quantity for Cooked Bratwurst">
+                <button type="button" data-action="decrease" aria-label="Decrease Cooked Bratwurst"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="minus" aria-hidden="true" class="lucide lucide-minus icon"><path d="M5 12h14"></path></svg></button>
+                <output>0</output>
+                <button type="button" data-action="increase" aria-label="Increase Cooked Bratwurst"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+              </div>
+              <button class="add-button" type="button" data-action="add">Add to box</button>
+            </div>
+          </article>
+        
+          <article class="product-card" data-id="u2367d">
+            <div class="product-photo" style="--product-position:42% center">
+              <span class="badge">Spicy</span>
+            </div>
+            <div class="product-body">
+              <h3>Smoked Bratwurst with Cheddar and Jalapeno</h3>
+              <p>Smoked pork and beef with cheddar, jalapeno, and applewood smoked bacon.</p>
+              <div class="meta-row">
+                <span class="price">$7.49</span>
+                <span class="unit">per 12 oz. package</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="stepper" aria-label="Quantity for Smoked Bratwurst with Cheddar and Jalapeno">
+                <button type="button" data-action="decrease" aria-label="Decrease Smoked Bratwurst with Cheddar and Jalapeno"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="minus" aria-hidden="true" class="lucide lucide-minus icon"><path d="M5 12h14"></path></svg></button>
+                <output>0</output>
+                <button type="button" data-action="increase" aria-label="Increase Smoked Bratwurst with Cheddar and Jalapeno"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+              </div>
+              <button class="add-button" type="button" data-action="add">Add to box</button>
+            </div>
+          </article>
+        
+          <article class="product-card" data-id="u7153d">
+            <div class="product-photo" style="--product-position:62% center">
+              <span class="badge">All Natural</span>
+            </div>
+            <div class="product-body">
+              <h3>Applewood Smoked Turkey Breast</h3>
+              <p>Uncured turkey breast with a light honey note, smoked over applewood fires.</p>
+              <div class="meta-row">
+                <span class="price">$5.49</span>
+                <span class="unit">per 6 oz. package</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="stepper" aria-label="Quantity for Applewood Smoked Turkey Breast">
+                <button type="button" data-action="decrease" aria-label="Decrease Applewood Smoked Turkey Breast"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="minus" aria-hidden="true" class="lucide lucide-minus icon"><path d="M5 12h14"></path></svg></button>
+                <output>0</output>
+                <button type="button" data-action="increase" aria-label="Increase Applewood Smoked Turkey Breast"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+              </div>
+              <button class="add-button" type="button" data-action="add">Add to box</button>
+            </div>
+          </article>
+        
+          <article class="product-card" data-id="u-bacon">
+            <div class="product-photo" style="--product-position:78% center">
+              <span class="badge">Smokehouse</span>
+            </div>
+            <div class="product-body">
+              <h3>Applewood Smoked Bacon</h3>
+              <p>A breakfast staple with the practical heft of a deli counter favorite.</p>
+              <div class="meta-row">
+                <span class="price">$8.99</span>
+                <span class="unit">per 12 oz. package</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="stepper" aria-label="Quantity for Applewood Smoked Bacon">
+                <button type="button" data-action="decrease" aria-label="Decrease Applewood Smoked Bacon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="minus" aria-hidden="true" class="lucide lucide-minus icon"><path d="M5 12h14"></path></svg></button>
+                <output>0</output>
+                <button type="button" data-action="increase" aria-label="Increase Applewood Smoked Bacon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+              </div>
+              <button class="add-button" type="button" data-action="add">Add to box</button>
+            </div>
+          </article>
+        
+          <article class="product-card" data-id="u-summer">
+            <div class="product-photo" style="--product-position:center">
+              <span class="badge">Snackable</span>
+            </div>
+            <div class="product-body">
+              <h3>All Natural Summer Sausage</h3>
+              <p>A compact, slice-and-serve sausage for boards, lunches, and road trips.</p>
+              <div class="meta-row">
+                <span class="price">$4.49</span>
+                <span class="unit">per 6 oz. package</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="stepper" aria-label="Quantity for All Natural Summer Sausage">
+                <button type="button" data-action="decrease" aria-label="Decrease All Natural Summer Sausage"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="minus" aria-hidden="true" class="lucide lucide-minus icon"><path d="M5 12h14"></path></svg></button>
+                <output>0</output>
+                <button type="button" data-action="increase" aria-label="Increase All Natural Summer Sausage"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+              </div>
+              <button class="add-button" type="button" data-action="add">Add to box</button>
+            </div>
+          </article>
+        
+          <article class="product-card" data-id="u-gift">
+            <div class="product-photo" style="--product-position:34% center">
+              <span class="badge">Gift</span>
+            </div>
+            <div class="product-body">
+              <h3>Riverfront Gift Box</h3>
+              <p>A hypothetical gift build with sausage, mustard, cheese, and crackers.</p>
+              <div class="meta-row">
+                <span class="price">$64.00</span>
+                <span class="unit">curated gift assortment</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="stepper" aria-label="Quantity for Riverfront Gift Box">
+                <button type="button" data-action="decrease" aria-label="Decrease Riverfront Gift Box"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="minus" aria-hidden="true" class="lucide lucide-minus icon"><path d="M5 12h14"></path></svg></button>
+                <output>0</output>
+                <button type="button" data-action="increase" aria-label="Increase Riverfront Gift Box"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus icon"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+              </div>
+              <button class="add-button" type="button" data-action="add">Add to box</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- block: build-a-box -->
+    <section class="block build-box-block reveal is-visible" data-block="build-a-box" id="build" aria-labelledby="build-title">
+      <div class="section-inner box-grid">
+        <div class="box-copy">
+          <span class="eyebrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="package-check" aria-hidden="true" class="lucide lucide-package-check icon"><path d="M12 22V12"></path><path d="m16 17 2 2 4-4"></path><path d="M21 11.127V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.32-.753"></path><path d="M3.29 7 12 12l8.71-5"></path><path d="m7.5 4.27 8.997 5.148"></path></svg> Deli checkout, clarified</span>
+          <h2 class="section-title" id="build-title">The cold box turns a rule into a reason to keep shopping.</h2>
+          <p class="section-lede">Instead of hiding the deli minimum at checkout, this block lets customers track weight, subtotal, and shipment readiness as they browse.</p>
+          <div class="box-steps">
+            <article class="box-step">
+              <strong>1</strong>
+              <div><h3>Pick favorites</h3><p>Brats, bacon, deli meats, and smokehouse staples all contribute to the same cold shipment.</p></div>
+            </article>
+            <article class="box-step">
+              <strong>2</strong>
+              <div><h3>Watch the weight</h3><p>The progress meter makes the 6 lb minimum visible while the cart is still easy to adjust.</p></div>
+            </article>
+            <article class="box-step">
+              <strong>3</strong>
+              <div><h3>Ship with confidence</h3><p>The call to action changes from blocked to ready when the box is full enough.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="box-panel" aria-label="Cold box cart summary">
+          <div class="box-panel-head">
+            <h3>Cold Box</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="snowflake" aria-hidden="true" class="lucide lucide-snowflake icon"><path d="m10 20-1.25-2.5L6 18"></path><path d="M10 4 8.75 6.5 6 6"></path><path d="m14 20 1.25-2.5L18 18"></path><path d="m14 4 1.25 2.5L18 6"></path><path d="m17 21-3-6h-4"></path><path d="m17 3-3 6 1.5 3"></path><path d="M2 12h6.5L10 9"></path><path d="m20 10-1.5 2 1.5 2"></path><path d="M22 12h-6.5L14 15"></path><path d="m4 10 1.5 2L4 14"></path><path d="m7 21 3-6-1.5-3"></path><path d="m7 3 3 6h4"></path></svg>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-stat">
+              <div>
+                <strong id="weightTotal">0.0</strong>
+                <span>lb added</span>
+              </div>
+              <div>
+                <strong id="weightLeft">6.0</strong>
+                <span>lb left</span>
+              </div>
+            </div>
+            <div class="progress-bar" aria-hidden="true"><span id="progressBar" style="width: 0%;"></span></div>
+          </div>
+          <div class="cart-lines" id="cartLines"><p class="empty-cart">Your box is empty. Add a few deli favorites above to see the minimum and shipment state update.</p></div>
+          <div class="cart-total">
+            <div class="total-row"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+            <div class="total-row"><span>Deli weight</span><strong id="cartWeight">0.0 lb</strong></div>
+            <div class="shipping-note" id="shippingNote">6.0 lb left before deli checkout.</div>
+            <button class="primary-action" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="truck" aria-hidden="true" class="lucide lucide-truck icon"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg> Schedule cold shipment</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- block: heritage-story -->
+    <section class="block heritage-block reveal is-visible" data-block="heritage-story" id="heritage" aria-labelledby="heritage-title">
+      <div class="section-inner heritage-grid">
+        <div class="heritage-media">
+          <div class="heritage-label">
+            <strong>1880</strong>
+            <span>A brand story that deserves more than a footer paragraph.</span>
+          </div>
+        </div>
+        <div class="heritage-content">
+          <div>
+            <span class="section-kicker">Old-world craft</span>
+            <h2 class="section-title" id="heritage-title">Make the history feel edible.</h2>
+            <p class="section-lede">A homepage can carry the heritage without getting dusty: big type, tactile color, and a rhythm that feels like a deli counter ticket.</p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <strong>1880</strong>
+              <div><h3>Milwaukee roots</h3><p>The brand begins with a riverfront sense of place and a craft tradition shoppers can recognize instantly.</p></div>
+            </article>
+            <article class="timeline-item">
+              <strong>Now</strong>
+              <div><h3>Commerce made practical</h3><p>Modern navigation, visible shipping constraints, and guided product paths reduce friction.</p></div>
+            </article>
+            <article class="timeline-item">
+              <strong>Next</strong>
+              <div><h3>Blocks for scale</h3><p>Each homepage band is structured as a reusable section that can become a discrete authoring block.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- block: gift-builder -->
+    <section class="block gift-block reveal is-visible" data-block="gift-builder" id="gifts" aria-labelledby="gift-title">
+      <div class="section-inner">
+        <div class="gift-header">
+          <div>
+            <span class="eyebrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gift" aria-hidden="true" class="lucide lucide-gift icon"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg> Gifting season, simplified</span>
+            <h2 class="section-title" id="gift-title">Gift boxes that look like they came from a very good neighbor.</h2>
+            <p class="section-lede">A dedicated block can convert holiday traffic with curated tiers, stronger product storytelling, and clear bundle values.</p>
+          </div>
+          <p class="gift-note">This section is intentionally separate from the product shelf so merchandising can swap gift collections without touching the deli cart experience.</p>
+        </div>
+
+        <div class="gift-grid stagger">
+          <article class="gift-card" style="--gift-position: 20% center">
+            <div class="gift-card-content">
+              <span class="badge">Host gift</span>
+              <h3>Riverfront Sampler</h3>
+              <p>Summer sausage, mustard, crackers, and snackable Wisconsin staples.</p>
+              <strong>From $42</strong>
+            </div>
+          </article>
+          <article class="gift-card" style="--gift-position: center">
+            <div class="gift-card-content">
+              <span class="badge">Tailgate</span>
+              <h3>Game Day Crate</h3>
+              <p>Brats, smoked links, cheese pairings, and a cold-pack shipping story.</p>
+              <strong>From $68</strong>
+            </div>
+          </article>
+          <article class="gift-card" style="--gift-position: 76% center">
+            <div class="gift-card-content">
+              <span class="badge">Classic</span>
+              <h3>Old World Deluxe</h3>
+              <p>A bigger box for family tables, client gifts, and holiday traditions.</p>
+              <strong>From $96</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- block: store-visit -->
+    <section class="block visit-block reveal is-visible" data-block="store-visit" id="visit" aria-labelledby="visit-title">
+      <div class="section-inner">
+        <div class="visit-shell">
+          <div class="visit-copy">
+            <div>
+              <span class="section-kicker">Visit the counter</span>
+              <h2 class="section-title" id="visit-title">A homepage should still point people to the smell of the place.</h2>
+              <p class="section-lede">For a heritage food brand, physical retail is not secondary. It is proof, memory, and a reason to trust the online order.</p>
+            </div>
+            <div class="visit-facts">
+              <article class="visit-fact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock-3" aria-hidden="true" class="lucide lucide-clock-3 icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6h4"></path></svg>
+                <strong>Retail hours</strong>
+                <span>Monday through Saturday, 9:00 AM to 4:00 PM.</span>
+              </article>
+              <article class="visit-fact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="store" aria-hidden="true" class="lucide lucide-store icon"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"></path><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path></svg>
+                <strong>Counter service</strong>
+                <span>Shop deli meats, sausages, seasonal gifts, and local favorites.</span>
+              </article>
+              <article class="visit-fact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="navigation" aria-hidden="true" class="lucide lucide-navigation icon"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                <strong>Milwaukee</strong>
+                <span>A riverfront destination with a century-plus story attached.</span>
+              </article>
+            </div>
+            <div class="visit-actions">
+              <a class="primary-action" href="https://www.usinger.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin icon"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> Plan a visit</a>
+              <a class="secondary-action" href="http://localhost:8765/usinger-ecommerce-concept.html#shop"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-bag" aria-hidden="true" class="lucide lucide-shopping-bag icon"><path d="M16 10a4 4 0 0 1-8 0"></path><path d="M3.103 6.034h17.794"></path><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path></svg> Shop online</a>
+            </div>
+          </div>
+          <div class="visit-map" aria-hidden="true">
+            <div class="map-pin">Milwaukee counter</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- block: newsletter-footer -->
+    <section class="block footer-cta-block reveal is-visible" data-block="newsletter-footer" aria-labelledby="footer-title">
+      <div class="section-inner">
+        <div class="footer-grid">
+          <div>
+            <span class="eyebrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail icon"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg> Keep the counter warm</span>
+            <h2 id="footer-title">Recipes, gift deadlines, and sausage lore worth opening.</h2>
+          </div>
+          <form class="newsletter">
+            <p>Invite shoppers into the brand after the first visit with recipe drops, holiday cutoff reminders, and limited-run smokehouse releases.</p>
+            <div class="newsletter-form">
+              <input type="email" aria-label="Email address" placeholder="email@example.com">
+              <button class="primary-action" type="button">Join list</button>
+            </div>
+          </form>
+        </div>
+        <div class="footer-bottom">
+          <span>Hypothetical Usinger's e-commerce homepage concept.</span>
+          <span>Palette, type, motion, and block structure locked for authoring exploration.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const products = [
+      { id: 'u2147d', filters: ['quick'], name: 'Cooked Bratwurst', price: 5.99, unit: 'per 12 oz. package', weight: 0.75, badge: 'Old World', desc: 'Pork and veal bratwurst, fully cooked and ready for the pan or grill.', position: '20% center' },
+      { id: 'u2367d', filters: ['spicy', 'quick'], name: 'Smoked Bratwurst with Cheddar and Jalapeno', price: 7.49, unit: 'per 12 oz. package', weight: 0.75, badge: 'Spicy', desc: 'Smoked pork and beef with cheddar, jalapeno, and applewood smoked bacon.', position: '42% center' },
+      { id: 'u7153d', filters: ['lean'], name: 'Applewood Smoked Turkey Breast', price: 5.49, unit: 'per 6 oz. package', weight: 0.38, badge: 'All Natural', desc: 'Uncured turkey breast with a light honey note, smoked over applewood fires.', position: '62% center' },
+      { id: 'u-bacon', filters: ['quick'], name: 'Applewood Smoked Bacon', price: 8.99, unit: 'per 12 oz. package', weight: 0.75, badge: 'Smokehouse', desc: 'A breakfast staple with the practical heft of a deli counter favorite.', position: '78% center' },
+      { id: 'u-summer', filters: ['quick'], name: 'All Natural Summer Sausage', price: 4.49, unit: 'per 6 oz. package', weight: 0.38, badge: 'Snackable', desc: 'A compact, slice-and-serve sausage for boards, lunches, and road trips.', position: 'center' },
+      { id: 'u-gift', filters: ['all'], name: 'Riverfront Gift Box', price: 64.00, unit: 'curated gift assortment', weight: 3.2, badge: 'Gift', desc: 'A hypothetical gift build with sausage, mustard, cheese, and crackers.', position: '34% center' }
+    ];
+
+    const cart = new Map();
+    let activeFilter = 'all';
+
+    function refreshIcons() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function money(value) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+    }
+
+    function visibleProducts() {
+      return products.filter((product) => activeFilter === 'all' || product.filters.includes(activeFilter));
+    }
+
+    function renderProducts() {
+      const shelf = document.querySelector('#productShelf');
+      shelf.innerHTML = visibleProducts().map((product) => {
+        const qty = cart.get(product.id) || 0;
+        return `
+          <article class="product-card" data-id="${product.id}">
+            <div class="product-photo" style="--product-position:${product.position}">
+              <span class="badge">${product.badge}</span>
+            </div>
+            <div class="product-body">
+              <h3>${product.name}</h3>
+              <p>${product.desc}</p>
+              <div class="meta-row">
+                <span class="price">${money(product.price)}</span>
+                <span class="unit">${product.unit}</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="stepper" aria-label="Quantity for ${product.name}">
+                <button type="button" data-action="decrease" aria-label="Decrease ${product.name}"><i data-lucide="minus" class="icon"></i></button>
+                <output>${qty}</output>
+                <button type="button" data-action="increase" aria-label="Increase ${product.name}"><i data-lucide="plus" class="icon"></i></button>
+              </div>
+              <button class="add-button" type="button" data-action="add">Add to box</button>
+            </div>
+          </article>
+        `;
+      }).join('');
+      refreshIcons();
+    }
+
+    function totals() {
+      let count = 0;
+      let subtotal = 0;
+      let weight = 0;
+      for (const [id, qty] of cart) {
+        const product = products.find((item) => item.id === id);
+        count += qty;
+        subtotal += product.price * qty;
+        weight += product.weight * qty;
+      }
+      return { count, subtotal, weight };
+    }
+
+    function renderCart() {
+      const { count, subtotal, weight } = totals();
+      const left = Math.max(0, 6 - weight);
+      document.querySelector('#navCount').textContent = count;
+      document.querySelector('#subtotal').textContent = money(subtotal);
+      document.querySelector('#cartWeight').textContent = `${weight.toFixed(1)} lb`;
+      document.querySelector('#weightTotal').textContent = weight.toFixed(1);
+      document.querySelector('#weightLeft').textContent = left.toFixed(1);
+      document.querySelector('#progressBar').style.width = `${Math.min(100, (weight / 6) * 100)}%`;
+      document.querySelector('#shippingNote').textContent = weight >= 6
+        ? 'Deli minimum met. Cold shipment can be scheduled.'
+        : `${left.toFixed(1)} lb left before deli checkout.`;
+
+      const lines = document.querySelector('#cartLines');
+      if (!count) {
+        lines.innerHTML = '<p class="empty-cart">Your box is empty. Add a few deli favorites above to see the minimum and shipment state update.</p>';
+        return;
+      }
+
+      lines.innerHTML = Array.from(cart.entries()).map(([id, qty]) => {
+        const product = products.find((item) => item.id === id);
+        return `
+          <div class="cart-line">
+            <strong>${product.name}</strong>
+            <strong>${money(product.price * qty)}</strong>
+            <span>${qty} x ${product.unit}</span>
+            <span>${(product.weight * qty).toFixed(1)} lb</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function initializeReveal() {
+      const sections = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        sections.forEach((section) => section.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    document.querySelector('#productShelf').addEventListener('click', (event) => {
+      const button = event.target.closest('button');
+      const card = event.target.closest('.product-card');
+      if (!button || !card) return;
+
+      const id = card.dataset.id;
+      const current = cart.get(id) || 0;
+      const action = button.dataset.action;
+      if (action === 'decrease') cart.set(id, Math.max(0, current - 1));
+      if (action === 'increase' || action === 'add') cart.set(id, current + 1);
+      if (cart.get(id) === 0) cart.delete(id);
+      renderProducts();
+      renderCart();
+    });
+
+    document.querySelectorAll('.chip[data-filter]').forEach((button) => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        document.querySelectorAll('.chip[data-filter]').forEach((item) => item.classList.toggle('active', item === button));
+        renderProducts();
+      });
+    });
+
+    renderProducts();
+    renderCart();
+    initializeReveal();
+    refreshIcons();
+  </script>
+
+
+</body></html>
