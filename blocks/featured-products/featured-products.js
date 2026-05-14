@@ -1,6 +1,5 @@
 import { decorateIcons, createOptimizedPicture } from '../../scripts/aem.js';
 
-const ICONS = { all: 'sparkles', quick: 'zap', lean: 'leaf', spicy: 'flame' };
 
 export default function decorate(block) {
   const rows = [...block.children];
@@ -51,16 +50,13 @@ export default function decorate(block) {
           </div>
         </div>
         <div class="product-actions">
-          <div class="stepper">
-            <button type="button" data-action="decrease" aria-label="Decrease">
-              <span class="icon icon-minus"></span>
-            </button>
-            <output>0</output>
-            <button type="button" data-action="increase" aria-label="Increase">
-              <span class="icon icon-plus"></span>
-            </button>
-          </div>
-          <button class="add-button" type="button" data-action="add">Add to box</button>
+          <button type="button" class="stepper-btn" data-action="decrease" aria-label="Decrease">
+            <span class="icon icon-minus"></span>
+          </button>
+          <output>0</output>
+          <button type="button" class="stepper-btn" data-action="increase" aria-label="Increase">
+            <span class="icon icon-plus"></span>
+          </button>
         </div>
       </article>`).join('');
 
@@ -82,7 +78,7 @@ export default function decorate(block) {
       <div class="chips" role="group" aria-label="Product filters">
         ${filters.map((f, i) => `
           <button class="chip${i === 0 ? ' active' : ''}" type="button" data-filter="${f.key}">
-            <span class="icon icon-${ICONS[f.key] || 'sparkles'}"></span> ${f.label}
+            ${f.label}
           </button>`).join('')}
       </div>
     </div>
@@ -90,7 +86,6 @@ export default function decorate(block) {
 
   const shelf = block.querySelector('.product-shelf');
   renderShelf(shelf);
-  decorateIcons(block);
 
   block.querySelectorAll('.chip[data-filter]').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -107,7 +102,7 @@ export default function decorate(block) {
     const output = card.querySelector('output');
     let qty = parseInt(output.textContent, 10) || 0;
     if (btn.dataset.action === 'decrease') qty = Math.max(0, qty - 1);
-    if (btn.dataset.action === 'increase' || btn.dataset.action === 'add') qty += 1;
+    if (btn.dataset.action === 'increase') qty += 1;
     output.textContent = qty;
     const name = card.querySelector('h3')?.textContent;
     const weight = parseFloat(card.dataset.weight || 0.75);
