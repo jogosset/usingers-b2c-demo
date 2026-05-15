@@ -1,7 +1,9 @@
 .announcement-bar-wrapper,
 .announcement-bar-container {
+  margin: 0;
   max-width: unset;
   padding: 0;
+  width: 100%;
 }
 
 .announcement-bar {
