@@ -6483,5 +6483,31 @@
         "label": "CTA destination URL"
       }
     ]
+  },
+  {
+    "id": "section-metadata",
+    "fields": [
+      {
+        "component": "select",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          { "name": "Default", "value": "" },
+          { "name": "Highlight", "value": "highlight" },
+          { "name": "Light", "value": "light" }
+        ]
+      },
+      {
+        "component": "color",
+        "name": "color",
+        "label": "Color"
+      },
+      {
+        "component": "reference",
+        "name": "background-image",
+        "label": "background-image",
+        "multi": false
+      }
+    ]
   }
 ]

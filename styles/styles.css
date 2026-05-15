@@ -623,6 +623,16 @@ main .section.highlight {
   padding: var(--spacing-xbig) 0;
 }
 
+main .section[style*="--section-bg-color"] {
+  background-color: var(--section-bg-color);
+}
+
+main .section[style*="--section-bg-image"] {
+  background-image: var(--section-bg-image);
+  background-position: center;
+  background-size: cover;
+}
+
 main .section[data-padding="default"] {
     padding: var(--spacing-xxsmall) 0;
 }

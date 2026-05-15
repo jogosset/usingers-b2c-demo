@@ -126,11 +126,20 @@ function decorateButtons(main) {
  * Decorates the main element.
  * @param {Element} main The main element
  */
+function applySectionStyles(main) {
+  main.querySelectorAll('.section').forEach((section) => {
+    const { color, backgroundImage } = section.dataset;
+    if (color) section.style.setProperty('--section-bg-color', color);
+    if (backgroundImage) section.style.setProperty('--section-bg-image', `url(${backgroundImage})`);
+  });
+}
+
 export function decorateMain(main) {
   decorateLinks(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  applySectionStyles(main);
   decorateBlocks(main);
   decorateButtons(main);
 }

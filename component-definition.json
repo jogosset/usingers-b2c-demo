@@ -1618,6 +1618,18 @@
               "unsafeHTML": "<div class=\"cold-bar\"><div><div>6</div><div>Minimum weight in lbs to unlock checkout</div></div><div><div>Schedule cold shipment</div><div><a href=\"/shop/cart\">Go to cart</a></div></div></div>"
             }
           }
+        },
+        {
+          "title": "Section Metadata",
+          "id": "section-metadata",
+          "model": "section-metadata",
+          "plugins": {
+            "da": {
+              "rows": 3,
+              "columns": 2,
+              "unsafeHTML": "<div class=\"section-metadata\"><div><div>Style</div><div>highlight</div></div><div><div>Color</div><div>#ffffff</div></div><div><div>background-image</div><div></div></div></div>"
+            }
+          }
         }
       ]
     }
