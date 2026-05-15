@@ -1,5 +1,5 @@
-.announcement-bar-wrapper,
-.announcement-bar-container {
+main > .section > .announcement-bar-wrapper,
+main > .section > .announcement-bar-wrapper > .announcement-bar-container {
   margin: 0;
   max-width: unset;
   padding: 0;
