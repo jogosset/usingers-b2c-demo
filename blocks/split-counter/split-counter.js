@@ -49,6 +49,7 @@ export default function decorate(block) {
 
   block.innerHTML = `
     ${bgPicture ? `<div class="counter-bg" aria-hidden="true">${bgPicture.outerHTML}</div>` : ''}
+    <div class="counter-inner">
     <div class="counter-left">
       <div class="counter-left-head">
         <span class="counter-eyebrow">${eyebrow || ''}</span>
@@ -85,7 +86,8 @@ export default function decorate(block) {
               </li>`).join('')}
           </ul>` : ''}
       </div>
-    </aside>`;
+    </aside>
+    </div>`;
 
   // Optimise images
   block.querySelectorAll('.counter-bg img, .counter-panel-media img').forEach((img) => {
