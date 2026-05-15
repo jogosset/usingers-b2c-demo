@@ -48,8 +48,8 @@ export default function decorate(block) {
   })).filter((item) => item.text);
 
   block.innerHTML = `
+    ${bgPicture ? `<div class="counter-bg" aria-hidden="true">${bgPicture.outerHTML}</div>` : ''}
     <div class="counter-left">
-      ${bgPicture ? `<div class="counter-bg" aria-hidden="true">${bgPicture.outerHTML}</div>` : ''}
       <div class="counter-left-head">
         <span class="counter-eyebrow">${eyebrow || ''}</span>
         <h1>${heading || ''}</h1>
